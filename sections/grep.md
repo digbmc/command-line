@@ -36,7 +36,8 @@ Before you leave today, we're going to prepare a little for our upcoming session
 $ pwd
 /Users/jojo/Desktop/projects
 $ mkdir cheatsheets
-$ mkdir databases
+$ mkdir data
+$ mkdir github
 ```
 
 Then move your `cheat-sheet.txt` file into your `cheatsheets` folder and your `nypl_items.csv` into your `databases` folder with the `mv` command:
