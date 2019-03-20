@@ -35,7 +35,7 @@ As we start to write more complicated and longer commands in our terminal, the "
 
 ## Creating folders
 
-OK, so we're going to be doing a lot of work during the Digital Research Institute. Let's create a project folder in our Desktop so that we can keep all our work in one place.
+We're going to be doing a lot of work during the Digital Scholarship Research Institute. Let's create a project folder in our Desktop so that we can keep all our work in one place.
 
 First, let's check to make sure we're still in the Desktop folder with `pwd`:
 
@@ -58,7 +58,7 @@ $ pwd
 /Users/jojo/Desktop/projects
 ```
 
-OK, now you've got a projects folder that you can use throughout the Institute. It should be visible on your graphical desktop, just like the `foo.txt` file we created earlier. 
+OK, now you've got a projects folder that you can use throughout the DSRI. It should be visible on your graphical desktop, just like the `foo.txt` file we created earlier. 
 
 [<<< Previous](navigation.md) | [Next >>>](creating_a_cheat_sheet.md)
 
