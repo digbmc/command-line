@@ -90,7 +90,7 @@ Use the three commands you've just learned—`pwd`, `ls` and `cd`—eight (8) ti
 cd ~
 ```
 
-(That's a tilde, on the top left of your keyboard.) One more command you might find useful is 
+(That's a tilde, usually found on the top left of a US keyboard.) One more command you might find useful is 
 
 ```
 cd ..
