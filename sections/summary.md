@@ -22,7 +22,7 @@ Having a grasp of command line basics will not only make you more familiar with 
 
 ### Moving forward
 
-What you have learned will be useful as you move forward through these tutorials. The command line will be immediately necessary for setting up your computer for version control with git in [the next lesson](https://github.com/DHRI-Curriculum/git)! You'll find that knowing a few commands can help immeasurably as you find new tools to use.
+What you have learned will be useful as you move forward through these tutorials. The command line will be immediately necessary for setting up your computer for version control with git in [an upcoming lesson](https://github.com/DHRI-Curriculum/git)! You'll find that knowing a few commands can help immeasurably as you find new tools to use.
 
 In the [DHRI Zotero Library](https://www.zotero.org/groups/2164386/digital_humanities_research_institute), you'll see articles discussing command line tools that people in the humanities often use like:
 
