@@ -65,7 +65,7 @@ You *could* use the GUI to open your Atom text editor--from your programs menu, 
 
 *OR*, you can open that specific cheat-sheet.txt file in the Atom text editor directly from the command line! Let's try that by using the `code` command in the command line:
 
-	code cheat-sheet.txt
+	atom cheat-sheet.txt
 
 Now that you've got your cheat sheet open in the Atom text editor, type to add the commands we've learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.
 
