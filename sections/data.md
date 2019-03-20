@@ -49,7 +49,7 @@ $ tail nypl_items.csv
 
 These commands print out the very first (the "head") and very last (the "tail") sections of the file, respectively.
 
-### Interlude for Jojo's favorite command line feature: tab completion.
+### Interlude for a super useful command line feature: tab completion.
 
 When you are navigating in the command line, typing folder and file names can seem to go against the promise of easier communication with your computer. Here comes `tab` completion, stage right! 
 
