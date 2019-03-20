@@ -40,11 +40,11 @@ $ mkdir data
 $ mkdir github
 ```
 
-Then move your `cheat-sheet.txt` file into your `cheatsheets` folder and your `nypl_items.csv` into your `databases` folder with the `mv` command:
+Then move your `cheat-sheet.txt` file into your `cheatsheets` folder and your `nypl_items.csv` into your `data` folder with the `mv` command:
 
 ```
 $ mv cheat-sheet.txt cheatsheets
-$ mv nypl_items.csv databases
+$ mv nypl_items.csv data
 ```
 
 [<<< Previous](data.md) | [Next >>>](summary.md)
