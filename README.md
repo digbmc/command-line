@@ -1,16 +1,16 @@
 # Introduction to the Command Line
 
-By this point in our academic careers, most of us have figured out some ways we like to interact with computers. Whether that involves avoiding them as much as possible or constantly testing new software, we likely have some ideas about how we feel comfortable getting things done. How would you show a person who had never seen a computer, say [Kimmy Schmidt](https://youtu.be/LIdFa1qLgNQ) or [Brendan Fraser in *Blast from the Past*](https://youtu.be/Xq29uTtKW4M), how to *do* something on your computer? 
+By this point in our academic careers, most of us have figured out some ways we like to interact with computers. Whether that involves avoiding them as much as possible or constantly testing new software, we likely have some ideas about how we feel comfortable getting things done. How would you show a person who had never seen a computer, say [Kimmy Schmidt](https://youtu.be/LIdFa1qLgNQ) or [Brendan Fraser in *Blast from the Past*](https://youtu.be/Xq29uTtKW4M), how to *do* something on your computer?
 
-Many of us would explain what a screen and a cursor are, and then show how to point and click on icons. This approach relies on a graphical user interface, or GUI (pronounced "gooey!"). 
+Many of us would explain what a screen and a cursor are, and then show how to point and click on icons. This approach relies on a graphical user interface, or GUI (pronounced "gooey!").
 
-Today we're going to explore another way to make your computer do things: through the command line. Instead of pointing and clicking, we'll be typing in either git bash (Windows) or terminal (OSX) to tell the computer directly what task we'd like it to perform. 
+Today we're going to explore another way to make your computer do things: through the command line. Instead of pointing and clicking, we'll be typing in either git bash (Windows) or terminal (OSX) to tell the computer directly what task we'd like it to perform.
 
 While this new technique can seem intimidating if you haven't used text-based interfaces before, luckily, you can use 90% of the functionality of the command line by becoming comfortable with a very small set of the most common commands.
 
 In this session, we will:
 
-- learn common commands to create files (`touch` and `echo`) 
+- learn common commands to create files (`touch` and `echo`)
 - learn commands to create directories (`mkdir`)
 - navigate our file structure using change directory (`cd`), print working directory (`pwd`), and list (`ls`)
 - move content from one place to another using redirects (`>`) and pipes (`|`)
@@ -19,7 +19,7 @@ In this session, we will:
 - create and sort cheat sheets for the commands we learn
 
 [Get Started >>>](sections/what-is-the-command-line.md)  
-[Glossary >>>](https://github.com/DHRI-Curriculum/glossary/blob/master/sections/command-line.md)  
+[Glossary >>>](https://github.com/tri-cods/glossary/blob/master/sections/command-line.md)  
 
 -----
 
@@ -41,7 +41,7 @@ In this session, we will:
 [More on text editors](sections/text-editors-ides.md)  
 [Other useful commands](sections/other-commands.md)  
 [Further challenges](sections/challenges.md)  
-[Glossary](sections/glossary.md)  
+[Glossary](https://github.com/tri-cods/glossary/blob/master/sections/command-line.md)  
 
 -----
 
