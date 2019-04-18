@@ -104,6 +104,10 @@ It's important to note that this is the same old information you can get by poin
 
 Go ahead and use pointing and clicking to navigate to your working directory--you can get there a few ways, but try starting from "My Computer" and clicking down from there. You'll notice that the folder names should match the ones that the command line spits out for you, since it's the same information! We're just using a different mode of navigation around your computer to see it.
 
+## Hot Tip
+
+Sometimes, you can see a folder in your GUI, but you aren't sure where it is buried in your file system. You can drag a file or folder into the terminal and it will print the full path to that file or directory! 
+
 [<<< Previous](getting-to-the-command-line.md) | [Next >>>](creating-files-and-folders.md)
   
 ## Example:
