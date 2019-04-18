@@ -10,7 +10,7 @@ While this new technique can seem intimidating if you haven't used text-based in
 
 In this session, we will:
 
-- learn common commands to create files (`touch` and `echo`)
+- learn common commands to create and display files (`touch` and `echo`)
 - learn commands to create directories (`mkdir`)
 - navigate our file structure using change directory (`cd`), print working directory (`pwd`), and list (`ls`)
 - move content from one place to another using redirects (`>`) and pipes (`|`)
