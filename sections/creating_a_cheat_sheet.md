@@ -61,11 +61,7 @@ The challenge for this section will be using a text editor, specifically Atom ([
 
 ## Challenge
 
-You *could* use the GUI to open your Atom text editor--from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows--and then click "File" and then "Open" from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file. 
-
-*OR*, you can open that specific cheat-sheet.txt file in the Atom text editor directly from the command line! Let's try that by using the `code` command in the command line:
-
-	atom cheat-sheet.txt
+Open your new cheat-sheet-txt. file in the Atom text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows--and then click "File" and then "Open" from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file. 
 
 Now that you've got your cheat sheet open in the Atom text editor, type to add the commands we've learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.
 
