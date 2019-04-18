@@ -56,6 +56,6 @@ review [our glossary for the command line](https://github.com/tri-cods/glossary)
 * [Command line tutorial]( https://ryanstutorials.net/linuxtutorial/ ) | A text-based tutorial by Ryan Chadwick
 
 [<<< Previous](grep.md)  
-[<<< Return to introduction](https://github.com/DHRI-Curriculum/command-line/)
+[<<< Return to introduction](https://github.com/tri-cods/command-line/)
 
 
