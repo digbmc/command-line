@@ -41,7 +41,7 @@ While it doesn't really matter which text editor you choose, you should try to b
 
 Choosing a text editor has as much to do with personality as it does with functionality. Graphical user interfaces (GUIs), user options, and "hackability" vary from program to program. For our workshops, we will be using [Atom](https://atom.io/). Not only is Atom free and open source, but it is also consistent across OSX, Windows, and Linux systems.
 
-You will have downloaded Atom according to the [instructions](https://github.com/tri-cods/install/blob/master/sections/atom.md) on the installations page. We won't be using the editor a lot in this tutorial, so don't worry about getting to know the editor now. In later workshops we will discuss syntax highlighting and version control, which Atom supports. For now we will get back to working in the command line itself.
+If you haven't yet, be sure to download Atom according to the [instructions](https://github.com/tri-cods/install/blob/master/sections/atom.md) on the installations page. 
 
 [<<< Previous](what-is-the-command-line.md) | [Next >>>](why-is-the-command-line-useful.md)
 
