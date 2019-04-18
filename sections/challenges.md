@@ -3,7 +3,7 @@
 
 # Further challenges
 
-These challenges are ordered from easiest to hardest. Let [me](https://github.com/smythp) know you've completed them all and I'll give you a bag of candy! And no, it's not cheating if you ask for help.
+These challenges are ordered from easiest to hardest. 
 
 ## Challenge #1: create hidden file
 
@@ -109,9 +109,9 @@ In this final challenge, we're going to write a real program in bash that can be
 
 Since Git Bash doesn't come with a `sudo` command that allows us to perform actions on folders that require special permissions, we'll need to approach this final challenge a little differently.
 
-First, we'll need to open our text editor, VS Code, with special administrator permissions. Press the Windows button on your keyboard or click the start menu and type `Visual Studio Code` into the search box. Do not click or hit Enter to open VS Code. Instead, right click on the VS Code icon and select the `Run as Administrator` option from the dropdown menu. If you are prompted to allow the program to be run with administrator privileges, select `Yes`.
+First, we'll need to open our text editor, Atom, with special administrator permissions. Press the Windows button on your keyboard or click the start menu and type `Atom` into the search box. Do not click or hit Enter to open the Atom text editor. Instead, right click on the Atom icon and select the `Run as Administrator` option from the dropdown menu. If you are prompted to allow the program to be run with administrator privileges, select `Yes`.
 
-Once VS Code is open with administrator permissions, write out the following program:
+Once Atom is open with administrator permissions, write out the following program:
 
 ```bash
 #!/bin/bash
