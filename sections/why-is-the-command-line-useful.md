@@ -4,7 +4,7 @@
 
 Initially, for some of us, the command line can feel a bit unfamiliar. Why step away from a point-and-click workflow? By using the command line, we move into an environment where we have more minute control over each task we'd like the computer to perform. Instead of ordering your food in a restaurant, you're stepping into the kitchen. It's more work, but there are also more possibilities. 
 
-The command line allows you to...
+The command line allows you to
 
 - Easily automate tasks such as creating, copying, and converting files.
 - Set up your programming environment.
