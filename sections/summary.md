@@ -48,7 +48,11 @@ or
 
 review [our glossary for the command line](https://github.com/tri-cods/glossary).   
 
-Here is an external [command line tutorial]( https://ryanstutorials.net/linuxtutorial/) if you wish to review and learn more.
+#### More tutorials and command line games
+
+* [Command line tutorial]( https://ryanstutorials.net/linuxtutorial/)
+* [Intro to Bash]( https://programminghistorian.org/en/lessons/intro-to-bash )
+* [Terminus](http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html)
 
 [<<< Previous](grep.md)  
 [<<< Return to introduction](https://github.com/DHRI-Curriculum/command-line/)
