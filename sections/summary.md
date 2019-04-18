@@ -50,9 +50,10 @@ review [our glossary for the command line](https://github.com/tri-cods/glossary)
 
 #### More tutorials and command line games
 
-* [Command line tutorial]( https://ryanstutorials.net/linuxtutorial/)
-* [Intro to Bash]( https://programminghistorian.org/en/lessons/intro-to-bash )
-* [Terminus](http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html)
+* [Command Line Murder Mystery]( https://github.com/veltman/clmystery ) | Solve a murder with terminal commands, by [Noah Veltman](Noah Veltman)
+* [Terminus]( http://web.mit.edu/mprat/Public/web/Terminus/Web/main.html ) | A classic, narrative-based, choose-your-own-adventure style game to learn basic terminal commands, by [Michele Pratusevich]( https://github.com/mprat )
+* [Intro to Bash]( https://programminghistorian.org/en/lessons/intro-to-bash ) | A Programming Historian tutorial by Ian Milligan and James Baker
+* [Command line tutorial]( https://ryanstutorials.net/linuxtutorial/ ) | A text-based tutorial by Ryan Chadwick
 
 [<<< Previous](grep.md)  
 [<<< Return to introduction](https://github.com/DHRI-Curriculum/command-line/)
