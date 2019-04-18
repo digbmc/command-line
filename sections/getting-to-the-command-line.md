@@ -21,7 +21,7 @@ Bonus points: if you really want to get the groove of just typing instead of poi
 
 ## Windows
 
-We won't be using Windows's own non-UNIX version of the command line. We installed Git Bash, following [these instructions](https://github.com/DHRI-Curriculum/install/blob/master/sections/git.md), so that we can work in the cross-platform Unix command line for this session. 
+We won't be using Windows's own non-UNIX version of the command line. We installed Git Bash, following [these instructions](https://github.com/tri-cods/install/blob/master/sections/git.md), so that we can work in the cross-platform Unix command line for this session. 
 
 1\. Look for Git Bash in your programs menu and open.  
 2\. If you can't find the git folder, just type "git bash" in the search box and select "git bash" when it appears.   
