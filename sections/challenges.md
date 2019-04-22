@@ -3,7 +3,7 @@
 
 # Further challenges
 
-These challenges are ordered from easiest to hardest. 
+These challenges are ordered from easiest to hardest.
 
 ## Challenge #1: create hidden file
 
@@ -16,7 +16,7 @@ $ ls
 hello.txt
 ```
 
-You can also create hidden folders this way, but you only need to create a file to pass the challenge. 
+You can also create hidden folders this way, but you only need to create a file to pass the challenge.
 
 
 ## Challenge #2: create an alias
@@ -42,7 +42,7 @@ So you made an alias, but you realized it goes away when you close and reopen th
 
 To do this, you will need to edit the configuration file that your terminal runs when it starts up. On Git Bash, that's going to be called `~/.bashrc`. (That's a `.bashrc` file in your home folder.) On OSX, the file is called `~/.bash_profile`. Just add the command you used to create the alias to the file with your text editor. Close and reopen the terminal to make sure your alias still works.
 
-## Challenge #4: create your own shell script 
+## Challenge #4: create your own shell script
 
 Due to platform differences, Windows users should skip directly to Challenge #5.
 
@@ -57,8 +57,8 @@ This challenge is to create a bash script, a REAL program written in bash. To do
 Under that, write some lines of bash that you want to be executed. How about a program that goes to your projects folder from wherever you are?
 
 ```
-cd ~/Desktop/projects
-echo "Now you're in $(pwd)"
+$ cd ~/Desktop/projects
+$ echo "Now you're in $(pwd)"
 ```
 
 Your script should look like this when you're done.
@@ -67,8 +67,8 @@ goto-projects.sh:
 ```
 #!/bin/bash
 
-cd ~/Desktop/projects
-echo "Now you're in $(pwd)"
+$ cd ~/Desktop/projects
+$ echo "Now you're in $(pwd)"
 ```
 
 Now run this command to make your script executable. This gives your computer permission to run it as a program:
@@ -92,10 +92,10 @@ Last challenge! So you've made a real program in bash, you're probably feeling p
 This challenge must be performed differently in Mac OS and in Windows using Git Bash.
 
 ```
-sudo mv goto-projects.sh /bin/goto-projects
+$ sudo mv goto-projects.sh /bin/goto-projects
 ```
 
-This moves your script from its current folder to the `/bin` folder and renames it from `goto-projects.sh` to `goto-projects`. Now close your terminal with `exit` and reopen it. Type 
+This moves your script from its current folder to the `/bin` folder and renames it from `goto-projects.sh` to `goto-projects`. Now close your terminal with `exit` and reopen it. Type
 
 
 	$ goto-projects
@@ -116,8 +116,8 @@ Once Atom is open with administrator permissions, write out the following progra
 ```bash
 #!/bin/bash
 
-cd ~/Desktop/projects
-echo "Now you're in $(pwd)"
+$ cd ~/Desktop/projects
+$ echo "Now you're in $(pwd)"
 ```
 
 The first line of the program is a special line that lets the command line know which program to use to run the script. The other lines are bash (command line) commands that will be run one after the other when our bash script is executed. As you may be able to guess, this script will first go to our Desktop folder and then print out a message letting us know where we are.
@@ -125,13 +125,13 @@ The first line of the program is a special line that lets the command line know 
 Once our script is written out, save it in the following folder on your system:
 
 	c:\Program Files\Git\usr\bin
-	
+
 This is a folder where Git Bash looks to determine which commands are available when it starts up. Enter `goto-projects` as the filename, and VS Code should automatically add a `.sh` extension, indicating that the file is a bash script.
 
 Close and reopen Git Bash. You should now be able to run your new command by typing
 
 	goto-projects.sh
-	
+
 at the `$` prompt. If the command isn't appearing, you may want to use Git Bash to navigate to the `/usr/bin` folder and use `ls` to see if the command was saved correctly and what it is called.
 
 [<<< Return to introduction](README.md)

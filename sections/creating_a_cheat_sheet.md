@@ -2,7 +2,7 @@
 
 # Creating a cheat sheet
 
-In this section, we'll create a text file that we can use as a cheat sheet. You can use it to keep track of all the awesome commands you're learning. 
+In this section, we'll create a text file that we can use as a cheat sheet. You can use it to keep track of all the awesome commands you're learning.
 
 ## `Echo`
 
@@ -18,7 +18,7 @@ Hello from the command line
 By default, the echo command just prints out the text we give it. Let's use it to create a file with some text in it:
 
 ```
-echo "This is my cheat sheet" > cheat-sheet.txt
+$ echo "This is my cheat sheet" > cheat-sheet.txt
 ```
 
 Now let's check the contents of the directory:
@@ -39,7 +39,7 @@ If you want to add text to a file but *not* overwrite it, you can use the `>>` c
 Let's check if there's any text in cheat-sheet.txt.
 
 ```
-cat cheat-sheet.txt
+$ cat cheat-sheet.txt
 This is my cheat sheet
 ```
 
@@ -49,19 +49,19 @@ As you can see, the `cat` command prints the contents of a file to the screen. `
 
 Your cheat sheet is titled `cheat-sheet.txt` instead of `cheat sheet.txt` for a reason. Can you guess why?
 
-Try to make a file titled `cheat sheet.txt` and report to the class what happens. 
+Try to make a file titled `cheat sheet.txt` and report to the class what happens.
 
-Now imagine you're attempting to open a very important data file using the command line that is titled `cheat sheet.txt`. 
+Now imagine you're attempting to open a very important data file using the command line that is titled `cheat sheet.txt`.
 
 For your digital best practices, we recommend making sure that file names contain no spaces--you can use creative capitalization, dashes, or underscores instead. Just keep in mind that the OS and Unix file systems are usually pre-configured as cAsE-pReSeRvInG, which means that capitalization matters when you type commands to navigate between or do things to directories and files.  
 
 ## Using a text editor
 
-The challenge for this section will be using a text editor, specifically Atom ([install guide here](https://github.com/tri-cods/install/blob/master/sections/atom.md)), to add some of the commands that we've learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems. 
+The challenge for this section will be using a text editor, specifically Atom ([install guide here](https://github.com/tri-cods/install/blob/master/sections/atom.md)), to add some of the commands that we've learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems.
 
 ## Challenge
 
-Open your new cheat-sheet-txt. file in the Atom text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows--and then click "File" and then "Open" from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file. 
+Open your new cheat-sheet-txt. file in the Atom text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows--and then click "File" and then "Open" from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file.
 
 Now that you've got your cheat sheet open in the Atom text editor, type to add the commands we've learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.
 
