@@ -26,7 +26,7 @@ Here we have asked `cat` to read nypl_items.csv, take the output and pipe it int
 
 Use the `grep` command to explore our .csv file a bit. What areas are best covered by the data set?
 
-If you want to get a little more milage out of the grep command, refer to [this tutorial on grep and regular expressions](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux). Regular expressions provide ways to search for text in more advanced ways, including specific wildcards, matching ranges of characters such as letters and numbers, and detecting features such as the beginning and end of lines.
+If you want to get a little more mileage out of the grep command, refer to [this tutorial on grep and regular expressions](https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux). Regular expressions provide ways to search for text in more advanced ways, including specific wildcards, matching ranges of characters such as letters and numbers, and detecting features such as the beginning and end of lines.
 
 ## Before we finish...
 
