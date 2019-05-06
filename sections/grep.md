@@ -30,21 +30,20 @@ If you want to get a little more mileage out of the grep command, refer to [this
 
 ## Before we finish...
 
-Before you leave today, we're going to prepare a little for our upcoming sessions. In your projects folder on the desktop, we're going to create a folder to house our cheat sheets for the week, as well as a new folder for the upcoming databases workshop.
+Before we finish, we're going to prepare a little for our upcoming sessions. In your projects folder on the desktop, we're going to create a folder to house our cheat sheets for the week, as well as a new folder for the upcoming github and tidydata workshops.
 
 ```
 $ pwd
 /Users/jojo/Desktop/projects
 $ mkdir cheatsheets
-$ mkdir data
+$ mkdir tidydata
 $ mkdir github
 ```
 
-Then move your `cheat-sheet.txt` file into your `cheatsheets` folder and your `nypl_items.csv` into your `data` folder with the `mv` command:
+Then move your `cheat-sheet.txt` file into your `cheatsheets` folder with the `mv` command:
 
 ```
 $ mv cheat-sheet.txt cheatsheets
-$ mv nypl_items.csv data
 ```
 
 [<<< Previous](data.md) | [Next >>>](summary.md)
