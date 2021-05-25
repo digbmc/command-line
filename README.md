@@ -1,8 +1,8 @@
 # Introduction to the Command Line
 
-By this point in our academic careers, most of us have figured out some ways we like to interact with computers. Whether that involves avoiding them as much as possible or constantly testing new software, we likely have some ideas about how we feel comfortable getting things done. How would you show a person who had never seen a computer, say [Kimmy Schmidt](https://youtu.be/LIdFa1qLgNQ) or [Brendan Fraser in *Blast from the Past*](https://youtu.be/Xq29uTtKW4M), how to *do* something on your computer?
+By this point in our academic careers, most of us have figured out some ways we like to interact with computers. Whether that involves avoiding them as much as possible or constantly testing new software, we likely have some ideas about how we feel comfortable getting things done. How would you show a person who had never seen a computer how to *do* something on your computer? 
 
-Many of us would explain what a screen and a cursor are, and then show how to point and click on icons. This approach relies on a graphical user interface, or GUI (pronounced "gooey!").
+Many of us would explain what a screen and a cursor are, and then show how to point and click on icons. This approach relies on a graphical user interface, or GUI (pronounced "gooey!"). Bust just as with any piece of technololgy, the GUI was introduced as a way of facilitating computer navigation. The GUI was never inate to computers. (For more see this 5min clip titled [Mother of all Demos](https://youtu.be/B6rKUf9DWRI)) 
 
 In this tutorial we're going to explore another way to make your computer do things: through the command line. Instead of pointing and clicking, we'll be typing in either git bash (Windows) or terminal (OSX) to tell the computer directly what task we'd like it to perform.
 
@@ -44,8 +44,8 @@ In this session, we will:
 [Glossary](https://github.com/tri-cods/glossary/blob/master/sections/command-line.md)  
 
 -----
-
-Session Leader: Alicia Peaker    
+Session modified by: Roberto Vargas
+Session initially expanded by: Alicia Peaker    
 Based on previous work by Patrick Smyth, Mary Catherine McKinniburgh, Jojo Karlin, and Kelsey Chatlosh.  
 
 [![Creative Commons License](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-sa/4.0/)
