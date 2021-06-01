@@ -36,8 +36,8 @@ Before we finish, we're going to prepare a little for our upcoming sessions. In 
 $ pwd
 /Users/jojo/Desktop/projects
 $ mkdir cheatsheets
+$ mkdir webdev
 $ mkdir tidydata
-$ mkdir github
 ```
 
 Then move your `cheat-sheet.txt` file into your `cheatsheets` folder with the `mv` command:

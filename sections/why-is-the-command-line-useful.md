@@ -11,6 +11,7 @@ The command line allows you to
 - Run programs you create.
 - Access the (many) programs and utilities that do not have graphical equivalents.
 - Control other computers remotely.
+- It is less resource-intensive
 
 In addition to being a useful tool in itself, the command line gives you access to a second set of programs and utilities and is a complement to learning programming.
 
