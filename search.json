@@ -77,103 +77,331 @@
     ]
   },
   {
-    "objectID": "sections/other-commands.html",
-    "href": "sections/other-commands.html",
-    "title": "Introduction to the Command Line",
+    "objectID": "sections/navigation.html",
+    "href": "sections/navigation.html",
+    "title": "Navigation",
     "section": "",
-    "text": "Other useful commands\n&lt;tab&gt; - The &lt;tab&gt; key on your keyboard will complete names of commands and files. Start typing a filename and hit tab twice to see all possible acceptable completions. If there is only one possibility, the rest of the name will be filled in for you.\n&lt;up&gt; - The &lt;up&gt; key will fill in the last command you ran. Hit it multiple times to cycle through the last commands you’ve entered.\nman &lt;command name&gt; - The man or manual command will provide information on any UNIX command. Try man ls, man grep, or man man.\nexit - Exit the terminal session. You can also use &lt;Control-d&gt;\nsudo - Run before a command to run it as an administrator. You will need to enter your password, and note that no asterisks or special characters will appear as you type.\nsu - Become the root user of the system. Your $ prompt will change to a # prompt.\n!! - Run the last command. To run the last command you entered with administrative privileges, use sudo !!\n* - refer to all files and folders in a directory, i.e., cat *.txt\nclear or &lt;Control-l&gt; - Clear the terminal window.\nwhich - Show where a command is stored on your system, i.e. which python\nhistory - See the previous commands you’ve entered in the terminal. Useful in conjunction with grep\ncp - Copy a file. cp file1 file2 will make a copy of file1 named file2. Can be used with the -r flag to copy whole folders.\nrm - This command can be dangerous, so use it carefully. Removes a file or files. If used with the wrong flags or in the wrong place, you can delete a lot of important files, so be careful with this one.\nrmdir - Remove an empty directory.\n. and .. - . Refers to the folder you’re in, while .. refers to the folder above.\n.hello.txt - Any file with a . in front of its name is a hidden file. You won’t see it in ls or in the GUI. To reveal hidden files, use ls -A\nping - Use ping google.com to see if your internet is working.\ndf -hl - Tells you how much hard drive space you have left.\ntop - Monitor which processes are using up your memory\nkill and killall - Kill a particular process or kill a category of processes by name. Try killall chrome or killall firefox\nsudo shutdown -r - Reboot the computer. shutdown -h turns off the computer.\ntime - Use before a command to find out how long that command takes to run.\nuptime - Tells how long your computer has been on.\n\n\nNot particularly useful commands\ncal - Show a calendar.\ntelnet towel.blinkenlights.nl - Watch Star Wars in the terminal. Because.\nsay \"Hello there\" - Have your computer talk to you. (Use espeak on Linux.)\nFind so much more on the command line:\nBash manual - the no nonsense text descriptions of bash commands.\nexplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
+    "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/navigation.html#prefatory-pro-tips",
+    "href": "sections/navigation.html#prefatory-pro-tips",
+    "title": "Navigation",
+    "section": "Prefatory pro tips",
+    "text": "Prefatory pro tips\nGo slow at first and check your spelling!\nOne of the biggest things you can do to make sure your code runs correctly and you can use the command line successfully is to make sure you check your spelling! Keep this in mind today, this week, and your whole life. If at first something doesn’t work, check your spelling! Unlike in human reading, where letters operate simultaneously as atomistic symbols and as complex contingencies (check Johanna Drucker on the alphabet), in coding, each character has a discrete function including (especially!) spaces.\nKeep in mind that the command line and file systems on Mac OS and Unix are usually pre-configured as cAsE-pReSeRvInG–so capitalizations also matter when typing commands and file and folder names.\nAlso, while copying and pasting from this handy tutorial may be tempting to avoid spelling errors and other things, we encourage you not to! Typing out each command will help you remember them and how they work.\n\nGetting started: know thyself\nYou may also see your username to the left of the command prompt $. Let’s try our first command. Type the following and press the enter key:\n$ whoami\nThe whoami command should print out your username. Congrats, you’ve executed your first command! This is a basic pattern of use in the command line: type a command, press enter on your keyboard, and receive output.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/navigation.html#orienting-yourself-in-the-command-line-folders",
+    "href": "sections/navigation.html#orienting-yourself-in-the-command-line-folders",
+    "title": "Navigation",
+    "section": "Orienting yourself in the command line: folders",
+    "text": "Orienting yourself in the command line: folders\nOK, we’re going to try another command. But first, let’s make sure we understand some things about how your computer’s filesystem works.\nYour computer’s files are organized in what’s known as a hierarchical filesystem. That means there’s a top level or “root” folder on your system. That folder has other folders in it, and those folders have folders in them, and so on. You can draw these relationships in a tree:\nUsers\n|\n-- jojokarlin\n  |\n  -- Applications\n  -- Desktop\n  -- Documents\nThe root or highest-level folder on OSX is just called /. We won’t need to go in there, though, since that’s mostly just files for the operating system. On Windows, the root directory is usually called C: (More on why C is default on Windows.).\nNote that we are using the word “directory” interchangeably with “folder”–they both refer to the same thing.\nOK, let’s try a command that tells us where we are in the filesystem:\n$ pwd\nYou should get output like /Users/jojo. That means you’re in the jojo directory in the Users folder inside the / or root directory. On Windows, your output would instead be C:/Users/jojo. The folder you’re in is called the working directory, and pwd stands for “print working directory.”\nThe command pwd won’t actually print anything except on your screen. This command is easier to grasp when we interpret “print” as “display.”\nOK, we know where we are. But what if we want to know what files and folders are in the jojo directory, a.k.a. the working directory?\nTry entering:\n$ ls\nYou should see a number of folders, probably including Documents, Desktop, and so on. You may also see some files. These are the contents of the current working directory. ls will “list” the contents of the directory you are in.\nWonder what’s in the Desktop folder? Let’s try navigating to it with the following command:\n$ cd Desktop\nThe cd command lets us “change directory.”\n(Make sure the “D” in “Desktop” is capitalized. ) If the command was successful, you won’t see any output. This is normal —- often, the command line will succeed silently.\nSo how do we know it worked? That’s right, let’s use our pwd command again. We should get:\n$ pwd\n/Users/jojo/Desktop\nNow try ls again to see what’s on your desktop. These three commands—pwd, ls, and cd—are the most commonly used in the terminal. Between them, you can orient yourself and move around.\nBefore we move on, let’s take a minute to navigate through our computer’s file system using the command line.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/navigation.html#challenge",
+    "href": "sections/navigation.html#challenge",
+    "title": "Navigation",
+    "section": "Challenge",
+    "text": "Challenge\nUse the three commands you’ve just learned—pwd, ls and cd—eight (8) times each. Go poking around your Photos folder, or see what’s so special about that root / directory. When you’re done, come back to the home folder with\ncd ~\n(That’s a tilde, usually found on the top left of a US keyboard.) One more command you might find useful is\ncd ..\nwhich will move you one directory up in the filesystem. That’s a cd with two periods after it.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/navigation.html#compare-with-the-gui",
+    "href": "sections/navigation.html#compare-with-the-gui",
+    "title": "Navigation",
+    "section": "Compare with the GUI",
+    "text": "Compare with the GUI\nIt’s important to note that this is the same old information you can get by pointing and clicking displayed to you in a different way.\nGo ahead and use pointing and clicking to navigate to your working directory–you can get there a few ways, but try starting from “My Computer” and clicking down from there. You’ll notice that the folder names should match the ones that the command line spits out for you, since it’s the same information! We’re just using a different mode of navigation around your computer to see it.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/navigation.html#hot-tip",
+    "href": "sections/navigation.html#hot-tip",
+    "title": "Navigation",
+    "section": "Hot Tip",
+    "text": "Hot Tip\nSometimes, you can see a folder in your GUI, but you aren’t sure where it is buried in your file system. You can drag a file or folder into the terminal and it will print the full path to that file or directory!\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/navigation.html#example",
+    "href": "sections/navigation.html#example",
+    "title": "Navigation",
+    "section": "Example:",
+    "text": "Example:\n\n\n\nNavigating the command line",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Navigation"
+    ]
+  },
+  {
+    "objectID": "sections/glossary.html",
+    "href": "sections/glossary.html",
+    "title": "Glossary of terms",
+    "section": "",
+    "text": "bash - The programming language used in the command line. (Yes, we tricked you, you’re already programming!) Short for “Born Again SHell,” for reasons people on the internet will happily tell you about.\ncli - “Command Language Interpreter,” this is a super technical term for the command line used to impress everyone around you.\nthe shell - The part of an operating system that interacts with a human. Technically, anything you do in a graphical interface is also in a shell, but in practice this is just another synonym for the command line.\nthe terminal - Particularly used to refer to the command line on OSX. This term made more sense when universities used mainframes and every computer was only a terminal.\n\n\n\nargument - In the command line, an argument is an item or parameter that you give a program when you start it. For instance, if you\ncommand - A specific task or function given to a computer application (Terminal or Bash in this tutorial) to perform some kind of task or function. At first it may seem like aribtrary letters are pulled out of thin air to enact some sort of magic. In fact, these commands (mkdir, ls, etc.) have been written by people to fulfill express functions. Options (see below) were developed for specific commands based on the commands’ functions. Most users only need a small set of the commands that come pre-installed in their command line interface to complete their desired tasks.\ndirectory - A folder on your hard drive.\nflag - Otherwise known as an option or switch, a flag provides additional information for how you wish a program to run. For instance, when executing the command grep, you may want to add the flag -i to ignore capitalization. If you wish to know what flags belond to particular commands, you can check the m\nGUI - “Graphical User Interface.” Pronounced “gooey,” like delicious gooey chocolate. Basically, anything on a computer that isn’t in the command line. All familiar elements of day-to-day computer tasks such as images, windows, prompts, buttons, and progress bars are part of the GUI. The way most people interact with computers. Some tasks can only be done in a GUI, while others can only be done in the command line.\noption - See flag\npath - A list of folders on your system that are checked for programs to generate the list of commands available on the command line. For example, since the folder /bin is typically on the path, putting an executable program in that folder will make it available as a command.\npipeline - In the command line, a pipeline is a sequence of processes. The output of one command feeds directly as input into the next command.\nprompt - The $ is known as the “prompt.” It indicates that your command line is ready to receive commands.\nREPL - “Read Eval Print Loop” The process of typing something in to the command line and getting something back out. Like most things to do with the command line, not as complicated (or scary) as it sounds.\nroot - A word for the administrative user on a system. You often need administrative privileges to install programs or access certain system folders using the command line. You can tell you’re root when your $ prompt turns into a # prompt. To become root, type su and enter the password you use to log in. (No characters or asterisks will appear, just type your password and press enter.) You can also run a single command as root by typing sudo before the command.\nText editor - A program for creating and editing plain text files. Unlike word processors such as LibreOffice and MS Word, which create complex documents in the form of archives that include formatting information and other metadata, a plain text editor creates a single file. Programmers tend to use plain text files because computers can work with them easily. Atom, Sublime Text, Nano, and VI are examples of text editors.\nUNIX - A family of operating systems that have a multi-user model and a particular design philosophy. Both OSX and Linux are UNIXes. Windows is not.\nwildcard * - The wildcard character on the command line will revolutionize your world. When you are giving a command an argument, for instance instead of\ngrep filename.txt\ntype\ngrep *.txt\nThe wildcard, *, will tell the command to search for any file ending with a .txt extension. But the wildcard can work anywhere in the string! If, for example, you want to move all formats (.doc, .pdf, .jpg) of the same name to a different folder you would type:\nmv [filename.*] [foldername]\n\n\n\nBash manual - the no nonsense text descriptions of bash commands.\nExplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
     "crumbs": [
       "DSSF Syllabus",
       "Resources",
-      "Other useful commands"
+      "Glossary of terms"
     ]
   },
   {
-    "objectID": "sections/grep.html",
-    "href": "sections/grep.html",
-    "title": "Searching text data",
+    "objectID": "sections/glossary.html#synonyms-for-the-command-line",
+    "href": "sections/glossary.html#synonyms-for-the-command-line",
+    "title": "Glossary of terms",
+    "section": "",
+    "text": "bash - The programming language used in the command line. (Yes, we tricked you, you’re already programming!) Short for “Born Again SHell,” for reasons people on the internet will happily tell you about.\ncli - “Command Language Interpreter,” this is a super technical term for the command line used to impress everyone around you.\nthe shell - The part of an operating system that interacts with a human. Technically, anything you do in a graphical interface is also in a shell, but in practice this is just another synonym for the command line.\nthe terminal - Particularly used to refer to the command line on OSX. This term made more sense when universities used mainframes and every computer was only a terminal.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Glossary of terms"
+    ]
+  },
+  {
+    "objectID": "sections/glossary.html#other-terms",
+    "href": "sections/glossary.html#other-terms",
+    "title": "Glossary of terms",
+    "section": "",
+    "text": "argument - In the command line, an argument is an item or parameter that you give a program when you start it. For instance, if you\ncommand - A specific task or function given to a computer application (Terminal or Bash in this tutorial) to perform some kind of task or function. At first it may seem like aribtrary letters are pulled out of thin air to enact some sort of magic. In fact, these commands (mkdir, ls, etc.) have been written by people to fulfill express functions. Options (see below) were developed for specific commands based on the commands’ functions. Most users only need a small set of the commands that come pre-installed in their command line interface to complete their desired tasks.\ndirectory - A folder on your hard drive.\nflag - Otherwise known as an option or switch, a flag provides additional information for how you wish a program to run. For instance, when executing the command grep, you may want to add the flag -i to ignore capitalization. If you wish to know what flags belond to particular commands, you can check the m\nGUI - “Graphical User Interface.” Pronounced “gooey,” like delicious gooey chocolate. Basically, anything on a computer that isn’t in the command line. All familiar elements of day-to-day computer tasks such as images, windows, prompts, buttons, and progress bars are part of the GUI. The way most people interact with computers. Some tasks can only be done in a GUI, while others can only be done in the command line.\noption - See flag\npath - A list of folders on your system that are checked for programs to generate the list of commands available on the command line. For example, since the folder /bin is typically on the path, putting an executable program in that folder will make it available as a command.\npipeline - In the command line, a pipeline is a sequence of processes. The output of one command feeds directly as input into the next command.\nprompt - The $ is known as the “prompt.” It indicates that your command line is ready to receive commands.\nREPL - “Read Eval Print Loop” The process of typing something in to the command line and getting something back out. Like most things to do with the command line, not as complicated (or scary) as it sounds.\nroot - A word for the administrative user on a system. You often need administrative privileges to install programs or access certain system folders using the command line. You can tell you’re root when your $ prompt turns into a # prompt. To become root, type su and enter the password you use to log in. (No characters or asterisks will appear, just type your password and press enter.) You can also run a single command as root by typing sudo before the command.\nText editor - A program for creating and editing plain text files. Unlike word processors such as LibreOffice and MS Word, which create complex documents in the form of archives that include formatting information and other metadata, a plain text editor creates a single file. Programmers tend to use plain text files because computers can work with them easily. Atom, Sublime Text, Nano, and VI are examples of text editors.\nUNIX - A family of operating systems that have a multi-user model and a particular design philosophy. Both OSX and Linux are UNIXes. Windows is not.\nwildcard * - The wildcard character on the command line will revolutionize your world. When you are giving a command an argument, for instance instead of\ngrep filename.txt\ntype\ngrep *.txt\nThe wildcard, *, will tell the command to search for any file ending with a .txt extension. But the wildcard can work anywhere in the string! If, for example, you want to move all formats (.doc, .pdf, .jpg) of the same name to a different folder you would type:\nmv [filename.*] [foldername]",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Glossary of terms"
+    ]
+  },
+  {
+    "objectID": "sections/glossary.html#other-command-line-resources",
+    "href": "sections/glossary.html#other-command-line-resources",
+    "title": "Glossary of terms",
+    "section": "",
+    "text": "Bash manual - the no nonsense text descriptions of bash commands.\nExplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Glossary of terms"
+    ]
+  },
+  {
+    "objectID": "sections/data.html",
+    "href": "sections/data.html",
+    "title": "Introduction to the Command Line",
     "section": "",
     "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
-      "Searching text data"
+      "Exploring text data"
     ]
   },
   {
-    "objectID": "sections/grep.html#challenge",
-    "href": "sections/grep.html#challenge",
-    "title": "Searching text data",
-    "section": "Challenge",
-    "text": "Challenge\nUse the grep command to explore our .csv file a bit. What areas are best covered by the data set?\nIf you want to get a little more mileage out of the grep command, refer to this tutorial on grep and regular expressions. Regular expressions provide ways to search for text in more advanced ways, including specific wildcards, matching ranges of characters such as letters and numbers, and detecting features such as the beginning and end of lines.",
+    "objectID": "sections/data.html#exploring-text-data",
+    "href": "sections/data.html#exploring-text-data",
+    "title": "Introduction to the Command Line",
+    "section": "Exploring text data",
+    "text": "Exploring text data\nSo far the only text file we’ve been working with is our cheat sheet. Now, this is where the command line can be a very powerful tool: let’s try working with a large text file, one that would be too large to work with by hand.\nLet’s download the data we’re going to work with:\nDownload nypl_items.csv\nOur data set is a list of public domain items from the New York Public Library. It’s in .csv format, which is a plain text spreadsheet format. CSV stands for “comma separated values,” and each field in the spreadsheet is separated with a comma. It’s all still plain text, though, so we can manipulate the data using the command line.\n\nMove command\nOnce the file is downloaded, move it from your Downloads folder to the projects folder on your desktop–either through the command line, or drag and drop in the GUI. Since this is indeed a command line workshop, you should try the former!\nTo move this file using the command line, you first need to navigate to your Downloads folder where that file is saved. Then type the mv command followed by the name of the file you want to move and then the file path to your projects folder on your desktop, which is where you want to move that file to (note that ~ refers to your home folder):\nmv nypl_items.csv ~/Desktop/projects/  \nYou can then navigate to that projects folder and use the ls command to check that the file is now there.\n\n\nViewing data in the command line\nTry using cat to look at the data. You’ll find it all goes by too fast to get any sense of it. (You can click Control and C on your keyboard to cancel the output if it’s taking too long.)\nInstead, let’s use another tool, the less command, to get the data one page at a time:\n$ less nypl_items.csv\n[...]\nLess gives you a paginated view of the data; it will show you contents of a file or the output from a command or string of commands, page by page.\nTo view the file contents page by page, you may use the following keyboard shortcuts (that should work on Windows using Git Bash or on Mac): Click the f key to view forward one page, or the b key to view back one page.\nOnce you’re done, click the q key to return to the command line.\nLet’s try two more commands for viewing the contents of a file:\n$ head nypl_items.csv\n[...]\n$ tail nypl_items.csv\n[...]\nThese commands print out the very first (the “head”) and very last (the “tail”) sections of the file, respectively.\n\n\nInterlude for a super useful command line feature: tab completion.\nWhen you are navigating in the command line, typing folder and file names can seem to go against the promise of easier communication with your computer. Here comes tab completion, stage right!\nWhen you need to type out a file or folder name–for example, the name of that csv file we’ve been working with: nypl_items.csv–in the command line and want to move more quickly, you can just type out the beginning characters of that file name up until it’s distinct in that folder and then click the tab key. And voilà! Clicking that tab key will complete the rest of that name for you, and it only works if that file or folder already exists within your working directory.\nIn other words, anytime in the command line you can type as much of the file or folder name that is unique within that directory, and tab complete the rest!\n\n\nNote: Clearing Text\nIf all the text remaining in your terminal window is starting to overwhelm you, you have some options. You may type the clear command into the command line, or click the command and k keys to clear the scrollback. In Mac OS terminal, clicking the command and l keys will clear the output from your most recent command.\n\n\nCleaning the data\nWe didn’t tell you this before, but there are duplicate lines in our data! Two, to be exact. Before we try removing them, let’s see how many entries are in our .csv file:\n$ cat nypl_items.csv | wc -l\n100001\nThis tells us there are 100,001 lines in our file. The wc tool stands for “word count,” but it can also count characters and lines in a file. We tell wc to count lines by using the -l flag. If we wanted to count characters, we could use wc -m. Flags marked with hyphens, such as -l or -m, indicate options which belong to specific commands. See the glossary for more information about flags and options.\nTo find and remove duplicate lines, we can use the uniq command. Let’s try it out:\n$ cat nypl_items.csv | uniq | wc -l\n99999\nOK, the count went down by two because the uniq command removed the duplicate lines. But which lines were duplicated?\n$ $ cat nypl_items.csv | uniq -d\n[...]\nThe uniq command with the -d flag prints out the lines that have duplicates.\n\n\nChallenge\nUse the commands you’ve learned so far to create a new version of the nypl_items.csv file with the duplicated lines removed. (Hint: redirects are your friend.)\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;\n\n\n\nexploring data",
     "crumbs": [
       "DSSF Syllabus",
-      "Searching text data"
+      "Exploring text data"
     ]
   },
   {
-    "objectID": "sections/grep.html#before-we-finish",
-    "href": "sections/grep.html#before-we-finish",
-    "title": "Searching text data",
-    "section": "Before we finish…",
-    "text": "Before we finish…\nBefore we finish, we’re going to prepare a little for our upcoming sessions. In your projects folder on the desktop, we’re going to create a folder to house our cheat sheets for the week, as well as a new folder for the upcoming github and tidydata workshops.\n$ pwd\n/Users/jojo/Desktop/projects\n$ mkdir cheatsheets\n$ mkdir webdev\n$ mkdir tidydata\nThen move your cheat-sheet.txt file into your cheatsheets folder with the mv command:\n$ mv cheat-sheet.txt cheatsheets\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;\nGo to other commands &gt;&gt;&gt;\nGo to further challenges &gt;&gt;&gt;",
+    "objectID": "sections/creating-files-and-folders.html",
+    "href": "sections/creating-files-and-folders.html",
+    "title": "Creating files and folders",
+    "section": "",
+    "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
-      "Searching text data"
+      "Creating files and folders"
     ]
   },
   {
-    "objectID": "sections/grep.html#example",
-    "href": "sections/grep.html#example",
-    "title": "Searching text data",
+    "objectID": "sections/creating-files-and-folders.html#creating-a-file",
+    "href": "sections/creating-files-and-folders.html#creating-a-file",
+    "title": "Creating files and folders",
+    "section": "Creating a file",
+    "text": "Creating a file\nSo far, we’ve only performed commands that give us information. Let’s use a command that creates something on the computer.\nFirst, make sure you’re in the home directory:\n$ pwd\n/Users/jojo\nLet’s move to the Desktop folder, or “change directory” with cd:\n$ cd Desktop\nOnce you’ve made sure you’re in the Desktop folder with pwd, let’s try a new command:\n$ touch foo.txt\nIf the command succeeds, you won’t see any output. Now move the terminal window and look at your “real” desktop, the graphical one. See any differences? If the command was successful and you were in the right place, you should see an empty text file called “foo.txt” on the desktop. Pretty cool, right?",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Creating files and folders"
+    ]
+  },
+  {
+    "objectID": "sections/creating-files-and-folders.html#handy-tip-up-arrow",
+    "href": "sections/creating-files-and-folders.html#handy-tip-up-arrow",
+    "title": "Creating files and folders",
+    "section": "Handy tip: up arrow",
+    "text": "Handy tip: up arrow\nLet’s say you liked that “foo.txt” file so much you’d like another! In the terminal window, press the “up arrow” on your keyboard. You’ll notice this populates the line with the command that you just wrote. You can hit “Enter” to create another “foo.txt,” (note - touch command will not overwrite your document nor will it add another document to the same directory, but it will update info about that file.) or you could use your left/right arrows to change the file name to “foot.txt” to create something different.\nAs we start to write more complicated and longer commands in our terminal, the “up arrow” is a great shortcut so you don’t have to spend lots of time typing.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Creating files and folders"
+    ]
+  },
+  {
+    "objectID": "sections/creating-files-and-folders.html#creating-folders",
+    "href": "sections/creating-files-and-folders.html#creating-folders",
+    "title": "Creating files and folders",
+    "section": "Creating folders",
+    "text": "Creating folders\nWe’re going to be doing a lot of work during the Digital Scholarship Research Institute. Let’s create a project folder in our Desktop so that we can keep all our work in one place.\nFirst, let’s check to make sure we’re still in the Desktop folder with pwd:\n$ pwd\n/Users/jojo/Desktop\nOnce you’ve double-checked you’re in Desktop, we’ll use the mkdir or “make directory” command to make a folder called “projects”:\n$ mkdir projects\nNow run ls to see if a projects folder has appeared. Once you confirm that the projects folder was created successfully, cd into it.\n$ cd projects\n$ pwd\n/Users/jojo/Desktop/projects\nOK, now you’ve got a projects folder that you can use throughout the DSRI. It should be visible on your graphical desktop, just like the foo.txt file we created earlier.\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Creating files and folders"
+    ]
+  },
+  {
+    "objectID": "sections/creating-files-and-folders.html#example",
+    "href": "sections/creating-files-and-folders.html#example",
+    "title": "Creating files and folders",
     "section": "Example",
-    "text": "Example\n\n\n\nSearching a text file with grep",
+    "text": "Example\n\n\n\nCreating files and folders",
     "crumbs": [
       "DSSF Syllabus",
-      "Searching text data"
+      "Creating files and folders"
     ]
   },
   {
-    "objectID": "sections/getting-to-the-command-line.html",
-    "href": "sections/getting-to-the-command-line.html",
-    "title": "Getting to the command line",
+    "objectID": "sections/challenges.html",
+    "href": "sections/challenges.html",
+    "title": "Further challenges",
     "section": "",
-    "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "text": "These challenges are ordered from easiest to hardest.\n\n\nUse the touch command to create a hidden file. Hidden files have a . in front of them, like this:\n$ ls -A\n.gitignore hello.txt\n$ ls\nhello.txt\nYou can also create hidden folders this way, but you only need to create a file to pass the challenge.\n\n\n\nAll these commands are great and all, but what if I want to make my own command? For example, maybe I want to make this happen:\n$ peptalk\nGood work\nTo do this, use the alias command:\n$ alias peptalk=\"echo Good work\"\nTo pass this challenge, make your own alias that does something different.\n\n\n\nSo you made an alias, but you realized it goes away when you close and reopen the terminal. (So unfair.) Make your alias permanent.\nTo do this, you will need to edit the configuration file that your terminal runs when it starts up. On Git Bash, that’s going to be called ~/.bashrc. (That’s a .bashrc file in your home folder.) On OSX, the file is called ~/.bash_profile. Just add the command you used to create the alias to the file with your text editor. Close and reopen the terminal to make sure your alias still works.\n\n\n\nDue to platform differences, Windows users should skip directly to Challenge #5.\nYou’re having fun with aliases, but are they REAL programs, or just glorified shortcuts?\nThis challenge is to create a bash script, a REAL program written in bash. To do this, create a text file (I’ll call this one goto-projects.sh) that begins with this line:\n#!/bin/bash\nUnder that, write some lines of bash that you want to be executed. How about a program that goes to your projects folder from wherever you are?\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nYour script should look like this when you’re done.\ngoto-projects.sh:\n#!/bin/bash\n\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nNow run this command to make your script executable. This gives your computer permission to run it as a program:\n$ chmod a+x goto-projects.sh\nNow run your program like this:\n$ ./goto-projects.sh\n\n\n\n\n\nLast challenge! So you’ve made a real program in bash, you’re probably feeling pretty proud of yourself. Deservedly so. But you still need to be in a folder with your program, and you still need to use that annoying ./ to run it. Let’s make our program accessible from anywhere on the system by moving it to the /bin folder.\nThis challenge must be performed differently in Mac OS and in Windows using Git Bash.\n$ sudo mv goto-projects.sh /bin/goto-projects\nThis moves your script from its current folder to the /bin folder and renames it from goto-projects.sh to goto-projects. Now close your terminal with exit and reopen it. Type\n$ goto-projects\nfrom anywhere and see if that runs your script. If it does, congratulations! You’re a force to be reckoned with on the command line.\n\n\n\nIn this final challenge, we’re going to write a real program in bash that can be used like any command on the command line.\nSince Git Bash doesn’t come with a sudo command that allows us to perform actions on folders that require special permissions, we’ll need to approach this final challenge a little differently.\nFirst, we’ll need to open our text editor, Atom, with special administrator permissions. Press the Windows button on your keyboard or click the start menu and type Atom into the search box. Do not click or hit Enter to open the Atom text editor. Instead, right click on the Atom icon and select the Run as Administrator option from the dropdown menu. If you are prompted to allow the program to be run with administrator privileges, select Yes.\nOnce Atom is open with administrator permissions, write out the following program:\n#!/bin/bash\n\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nThe first line of the program is a special line that lets the command line know which program to use to run the script. The other lines are bash (command line) commands that will be run one after the other when our bash script is executed. As you may be able to guess, this script will first go to our Desktop folder and then print out a message letting us know where we are.\nOnce our script is written out, save it in the following folder on your system:\nc:\\Program Files\\Git\\usr\\bin\nThis is a folder where Git Bash looks to determine which commands are available when it starts up. Enter goto-projects as the filename, and VS Code should automatically add a .sh extension, indicating that the file is a bash script.\nClose and reopen Git Bash. You should now be able to run your new command by typing\ngoto-projects.sh\nat the $ prompt. If the command isn’t appearing, you may want to use Git Bash to navigate to the /usr/bin folder and use ls to see if the command was saved correctly and what it is called.\n&lt;&lt;&lt; Return to introduction",
     "crumbs": [
       "DSSF Syllabus",
-      "Getting to the command line"
+      "Resources",
+      "Further challenges"
     ]
   },
   {
-    "objectID": "sections/getting-to-the-command-line.html#mac-os",
-    "href": "sections/getting-to-the-command-line.html#mac-os",
-    "title": "Getting to the command line",
-    "section": "Mac OS",
-    "text": "Mac OS\nIf you’re using Mac OS:\n1. Click the Spotlight Search button (the magnifying glass) in the top right of your desktop.\n2. Type “terminal” into the bar that appears.\n3. Select the first item that appears in the list.\n4. The terminal will look like this:\n\n\n\nTerminal in Mac OS\n\n\nWhen you see the $, you’re in the right place. We call the $ the command prompt; the $ lets us know the computer is ready to receive a command.\nYou can change the color of your Terminal or BashShell background and text by selecting Shell from the top menu bar, then selecting a theme from the menu under New Window.\nBonus points: if you really want to get the groove of just typing instead of pointing and clicking, you can press “Command (⌘)” and the space bar at the same time to pull up Spotlight search, start typing “Terminal,” and then hit “Enter” to open a terminal window. This will pull up a terminal window without touching your mousepad. For super bonus points, try to navigate like this for the next fifteen minutes, or even the rest of this session–it is tricky and sometimes a bit tiring when you start, but you can really pick up speed when you practice!",
+    "objectID": "sections/challenges.html#challenge-1-create-hidden-file",
+    "href": "sections/challenges.html#challenge-1-create-hidden-file",
+    "title": "Further challenges",
+    "section": "",
+    "text": "Use the touch command to create a hidden file. Hidden files have a . in front of them, like this:\n$ ls -A\n.gitignore hello.txt\n$ ls\nhello.txt\nYou can also create hidden folders this way, but you only need to create a file to pass the challenge.",
     "crumbs": [
       "DSSF Syllabus",
-      "Getting to the command line"
+      "Resources",
+      "Further challenges"
     ]
   },
   {
-    "objectID": "sections/getting-to-the-command-line.html#windows",
-    "href": "sections/getting-to-the-command-line.html#windows",
-    "title": "Getting to the command line",
-    "section": "Windows",
-    "text": "Windows\nWe won’t be using Windows’s own non-UNIX version of the command line. We installed Git Bash, following these instructions, so that we can work in the cross-platform Unix command line for this session.\n1. Look for Git Bash in your programs menu and open.\n2. If you can’t find the git folder, just type “git bash” in the search box and select “git bash” when it appears.\n3. Open the program.\n4. You know you’re in the right place when you see the $.",
+    "objectID": "sections/challenges.html#challenge-2-create-an-alias",
+    "href": "sections/challenges.html#challenge-2-create-an-alias",
+    "title": "Further challenges",
+    "section": "",
+    "text": "All these commands are great and all, but what if I want to make my own command? For example, maybe I want to make this happen:\n$ peptalk\nGood work\nTo do this, use the alias command:\n$ alias peptalk=\"echo Good work\"\nTo pass this challenge, make your own alias that does something different.",
     "crumbs": [
       "DSSF Syllabus",
-      "Getting to the command line"
+      "Resources",
+      "Further challenges"
     ]
   },
   {
-    "objectID": "sections/getting-to-the-command-line.html#command-prompt",
-    "href": "sections/getting-to-the-command-line.html#command-prompt",
-    "title": "Getting to the command line",
-    "section": "Command prompt $",
-    "text": "Command prompt $\n$, which we will refer to as the “command prompt,” is the place you type commands you wish the computer to execute. We will now learn some of the most common commands.\nIn the next section, we’ll learn how to navigate the filesystem in the command line.\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "objectID": "sections/challenges.html#challenge-3-make-a-permanent-alias",
+    "href": "sections/challenges.html#challenge-3-make-a-permanent-alias",
+    "title": "Further challenges",
+    "section": "",
+    "text": "So you made an alias, but you realized it goes away when you close and reopen the terminal. (So unfair.) Make your alias permanent.\nTo do this, you will need to edit the configuration file that your terminal runs when it starts up. On Git Bash, that’s going to be called ~/.bashrc. (That’s a .bashrc file in your home folder.) On OSX, the file is called ~/.bash_profile. Just add the command you used to create the alias to the file with your text editor. Close and reopen the terminal to make sure your alias still works.",
     "crumbs": [
       "DSSF Syllabus",
-      "Getting to the command line"
+      "Resources",
+      "Further challenges"
+    ]
+  },
+  {
+    "objectID": "sections/challenges.html#challenge-4-create-your-own-shell-script",
+    "href": "sections/challenges.html#challenge-4-create-your-own-shell-script",
+    "title": "Further challenges",
+    "section": "",
+    "text": "Due to platform differences, Windows users should skip directly to Challenge #5.\nYou’re having fun with aliases, but are they REAL programs, or just glorified shortcuts?\nThis challenge is to create a bash script, a REAL program written in bash. To do this, create a text file (I’ll call this one goto-projects.sh) that begins with this line:\n#!/bin/bash\nUnder that, write some lines of bash that you want to be executed. How about a program that goes to your projects folder from wherever you are?\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nYour script should look like this when you’re done.\ngoto-projects.sh:\n#!/bin/bash\n\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nNow run this command to make your script executable. This gives your computer permission to run it as a program:\n$ chmod a+x goto-projects.sh\nNow run your program like this:\n$ ./goto-projects.sh",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Further challenges"
+    ]
+  },
+  {
+    "objectID": "sections/challenges.html#challenge-5-make-your-script-run-from-anywhere",
+    "href": "sections/challenges.html#challenge-5-make-your-script-run-from-anywhere",
+    "title": "Further challenges",
+    "section": "",
+    "text": "Last challenge! So you’ve made a real program in bash, you’re probably feeling pretty proud of yourself. Deservedly so. But you still need to be in a folder with your program, and you still need to use that annoying ./ to run it. Let’s make our program accessible from anywhere on the system by moving it to the /bin folder.\nThis challenge must be performed differently in Mac OS and in Windows using Git Bash.\n$ sudo mv goto-projects.sh /bin/goto-projects\nThis moves your script from its current folder to the /bin folder and renames it from goto-projects.sh to goto-projects. Now close your terminal with exit and reopen it. Type\n$ goto-projects\nfrom anywhere and see if that runs your script. If it does, congratulations! You’re a force to be reckoned with on the command line.\n\n\n\nIn this final challenge, we’re going to write a real program in bash that can be used like any command on the command line.\nSince Git Bash doesn’t come with a sudo command that allows us to perform actions on folders that require special permissions, we’ll need to approach this final challenge a little differently.\nFirst, we’ll need to open our text editor, Atom, with special administrator permissions. Press the Windows button on your keyboard or click the start menu and type Atom into the search box. Do not click or hit Enter to open the Atom text editor. Instead, right click on the Atom icon and select the Run as Administrator option from the dropdown menu. If you are prompted to allow the program to be run with administrator privileges, select Yes.\nOnce Atom is open with administrator permissions, write out the following program:\n#!/bin/bash\n\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nThe first line of the program is a special line that lets the command line know which program to use to run the script. The other lines are bash (command line) commands that will be run one after the other when our bash script is executed. As you may be able to guess, this script will first go to our Desktop folder and then print out a message letting us know where we are.\nOnce our script is written out, save it in the following folder on your system:\nc:\\Program Files\\Git\\usr\\bin\nThis is a folder where Git Bash looks to determine which commands are available when it starts up. Enter goto-projects as the filename, and VS Code should automatically add a .sh extension, indicating that the file is a bash script.\nClose and reopen Git Bash. You should now be able to run your new command by typing\ngoto-projects.sh\nat the $ prompt. If the command isn’t appearing, you may want to use Git Bash to navigate to the /usr/bin folder and use ls to see if the command was saved correctly and what it is called.\n&lt;&lt;&lt; Return to introduction",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Further challenges"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Overview",
+    "section": "",
+    "text": "By this point in our academic careers, most of us have figured out some ways we like to interact with computers. Whether that involves avoiding them as much as possible or constantly testing new software, we likely have some ideas about how we feel comfortable getting things done. How would you show a person who had never seen a computer how to do something on your computer?\nMany of us would explain what a screen and a cursor are, and then show how to point and click on icons. This approach relies on a graphical user interface, or GUI (pronounced “gooey!”). Bust just as with any piece of technololgy, the GUI was introduced as a way of facilitating computer navigation. The GUI was never inate to computers. (For more see this 5min clip titled Mother of all Demos)\nIn this tutorial we’re going to explore another way to make your computer do things: through the command line. Instead of pointing and clicking, we’ll be typing in either git bash (Windows) or terminal (OSX) to tell the computer directly what task we’d like it to perform.\nWhile this new technique can seem intimidating if you haven’t used text-based interfaces before, luckily, you can use 90% of the functionality of the command line by becoming comfortable with a very small set of the most common commands.\nIn this session, we will:\n\nlearn common commands to create and display files (touch and echo)\nlearn commands to create directories (mkdir)\nnavigate our file structure using change directory (cd), print working directory (pwd), and list (ls)\nmove content from one place to another using redirects (&gt;) and pipes (|)\nexplore a comma separated values (.csv) dataset using word and line counts, head and tail, and the concatenate command cat\nsearch text files using the grep command\ncreate and sort cheat sheets for the commands we learn\n\nGet Started &gt;&gt;&gt;\nGlossary &gt;&gt;&gt;\n\nWhat is the command line?\nWorking with text\nWhy is the command line useful?\nGetting to the command line\nNavigation\nCreating files and folders\nCreating a cheat sheet\nPipes\nExploring text data\nSearching text data\nSummary of what we’ve covered\n\nResources\nCommands cheat sheet\nMore on text editors\nOther useful commands\nFurther challenges\nGlossary\n\nCurrent editor: Alice McGrath Past editors: Roberto Vargas, Alicia Peaker Based on previous work by Patrick Smyth, Mary Catherine McKinniburgh, Jojo Karlin, and Kelsey Chatlosh.\n\n\n\nCreative Commons License\n\n\nDigital Research Institute (DRI) Curriculum by Graduate Center Digital Initiatives is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Based on a work at https://github.com/DHRI-Curriculum. When sharing this material or derivative works, preserve this paragraph, changing only the title of the derivative work, or provide comparable attribution.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Introduction"
+    ]
+  },
+  {
+    "objectID": "sections/commands.html",
+    "href": "sections/commands.html",
+    "title": "Commands",
+    "section": "",
+    "text": "pwd - show the current (or “working”) directory. Stands for “print working directory”\nls - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”\n\nls -1 - show the files and folders in a nice vertical column.\n\ncd - move to a directory, i.e. cd Desktop will move to the “Desktop” folder. Some special cases:\n\ncd .. - go to the directory above\ncd ~ go to your “home” directory, i.e. /Users/\ncd (by itself) also goes to the home directory\ncd - go to the last directory you were in before the current\ncd ../.. travel two directories up\ncd Documents/thesis-drafts move two directories, from the home folder to “thesis-drafts,” skipping “Documents”\n\ntouch &lt;filename&gt; - Create an empty text file named &lt;filename&gt; in your current directory.\natom &lt;filename&gt; - Open file in atom (and create it, if it does not already exist).\nmkdir &lt;folder name&gt; - Create a directory named &lt;folder name&gt; in the current working directory.\necho &lt;some text&gt; - Print out any text you give it. Often used with a redirect to add text to a file.\ncat &lt;filename&gt; - Print the contents of a file to the screen, in this case the contents of &lt;filename&gt;\n&gt; - Redirects printed output to a text file. For example echo \"this is some text\" &gt; hello.txt would put “this is some text” in a file called hello.txt\n&gt;&gt; - Redirect and append. If there’s already a file with text in it, this command will add that text to the file without destroying and recreating it.\n| - Pipe symbol. Takes output from one command and uses it as input for another command.\nless &lt;filename&gt; - Print out the contents of a file in a paginated form. Use &lt;Control-v&gt; and &lt;Alt-v&gt; (or &lt;Command-v and &lt;Option-v&gt;) to move up and down. Press q to quit.\nhead &lt;filename&gt; - Print the first section of a file (first 10 lines or other specified quantity)\ntail &lt;filename&gt; - Print the last section of a file (last 10 lines or other specified quantity)\nwc -l - Takes input and returns the number of lines in that input, as in cat &lt;filename&gt; | wc -l\nsort - Arrange lines in a file in numeric and alphabetical order.\nuniq - Remove duplicate lines from input, as in cat &lt;filename&gt; | uniq. To show the duplicate files, use uniq -d. Often most useful after using sort, since it only removed duplicates that are next to one another.\nmv - Move or rename a file. For example, mv file1 file2 will rename file to file2. You can also specify another destination, so that mv file1 ~ will move file1 to the home folder without renaming it.\nrm &lt;filename&gt; - Permanently remove a file from your computer.\nclear - Clears our terminal window of the command history (you can also type Control + l).\ngrep -i &lt;text&gt; - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”\nrev - Reverses the text you give it, i.e. echo \"Hello there\" | rev\n\n\n\n&lt;tab&gt; - The &lt;tab&gt; key on your keyboard will complete names of commands and files. Start typing a filename and hit tab twice to see all possible acceptable completions. If there is only one possibility, the rest of the name will be filled in for you.\n&lt;up&gt; - The &lt;up&gt; key will fill in the last command you ran. Hit it multiple times to cycle through the last commands you’ve entered.\nman &lt;command name&gt; - The man or manual command will provide information on any UNIX command. Try man ls, man grep, or man man.\nexit - Exit the terminal session. You can also use &lt;Control-d&gt;\nsudo - Run before a command to run it as an administrator. You will need to enter your password, and note that no asterisks or special characters will appear as you type.\nsu - Become the root user of the system. Your $ prompt will change to a # prompt.\n!! - Run the last command. To run the last command you entered with administrative privileges, use sudo !!\n* - refer to all files and folders in a directory, i.e., cat *.txt\nclear or &lt;Control-l&gt; - Clear the terminal window.\nwhich - Show where a command is stored on your system, i.e. which python\nhistory - See the previous commands you’ve entered in the terminal. Useful in conjunction with grep\ncp - Copy a file. cp file1 file2 will make a copy of file1 named file2. Can be used with the -r flag to copy whole folders.\nrm - This command can be dangerous, so use it carefully. Removes a file or files. If used with the wrong flags or in the wrong place, you can delete a lot of important files, so be careful with this one.\nrmdir - Remove an empty directory.\n. and .. - . Refers to the folder you’re in, while .. refers to the folder above.\n.hello.txt - Any file with a . in front of its name is a hidden file. You won’t see it in ls or in the GUI. To reveal hidden files, use ls -A\nping - Use ping google.com to see if your internet is working.\ndf -hl - Tells you how much hard drive space you have left.\ntop - Monitor which processes are using up your memory\nkill and killall - Kill a particular process or kill a category of processes by name. Try killall chrome or killall firefox\nsudo shutdown -r - Reboot the computer. shutdown -h turns off the computer.\ntime - Use before a command to find out how long that command takes to run.\nuptime - Tells how long your computer has been on.\n\n\ncal - Show a calendar.\ntelnet towel.blinkenlights.nl - Watch Star Wars in the terminal. Because.\nsay \"Hello there\" - Have your computer talk to you. (Use espeak on Linux.)\nFind so much more on the command line:\nBash manual - the no nonsense text descriptions of bash commands.\nexplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Commands"
+    ]
+  },
+  {
+    "objectID": "sections/commands.html#core-commands",
+    "href": "sections/commands.html#core-commands",
+    "title": "Commands",
+    "section": "",
+    "text": "pwd - show the current (or “working”) directory. Stands for “print working directory”\nls - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”\n\nls -1 - show the files and folders in a nice vertical column.\n\ncd - move to a directory, i.e. cd Desktop will move to the “Desktop” folder. Some special cases:\n\ncd .. - go to the directory above\ncd ~ go to your “home” directory, i.e. /Users/\ncd (by itself) also goes to the home directory\ncd - go to the last directory you were in before the current\ncd ../.. travel two directories up\ncd Documents/thesis-drafts move two directories, from the home folder to “thesis-drafts,” skipping “Documents”\n\ntouch &lt;filename&gt; - Create an empty text file named &lt;filename&gt; in your current directory.\natom &lt;filename&gt; - Open file in atom (and create it, if it does not already exist).\nmkdir &lt;folder name&gt; - Create a directory named &lt;folder name&gt; in the current working directory.\necho &lt;some text&gt; - Print out any text you give it. Often used with a redirect to add text to a file.\ncat &lt;filename&gt; - Print the contents of a file to the screen, in this case the contents of &lt;filename&gt;\n&gt; - Redirects printed output to a text file. For example echo \"this is some text\" &gt; hello.txt would put “this is some text” in a file called hello.txt\n&gt;&gt; - Redirect and append. If there’s already a file with text in it, this command will add that text to the file without destroying and recreating it.\n| - Pipe symbol. Takes output from one command and uses it as input for another command.\nless &lt;filename&gt; - Print out the contents of a file in a paginated form. Use &lt;Control-v&gt; and &lt;Alt-v&gt; (or &lt;Command-v and &lt;Option-v&gt;) to move up and down. Press q to quit.\nhead &lt;filename&gt; - Print the first section of a file (first 10 lines or other specified quantity)\ntail &lt;filename&gt; - Print the last section of a file (last 10 lines or other specified quantity)\nwc -l - Takes input and returns the number of lines in that input, as in cat &lt;filename&gt; | wc -l\nsort - Arrange lines in a file in numeric and alphabetical order.\nuniq - Remove duplicate lines from input, as in cat &lt;filename&gt; | uniq. To show the duplicate files, use uniq -d. Often most useful after using sort, since it only removed duplicates that are next to one another.\nmv - Move or rename a file. For example, mv file1 file2 will rename file to file2. You can also specify another destination, so that mv file1 ~ will move file1 to the home folder without renaming it.\nrm &lt;filename&gt; - Permanently remove a file from your computer.\nclear - Clears our terminal window of the command history (you can also type Control + l).\ngrep -i &lt;text&gt; - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”\nrev - Reverses the text you give it, i.e. echo \"Hello there\" | rev",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Commands"
+    ]
+  },
+  {
+    "objectID": "sections/commands.html#other-useful-commands",
+    "href": "sections/commands.html#other-useful-commands",
+    "title": "Commands",
+    "section": "",
+    "text": "&lt;tab&gt; - The &lt;tab&gt; key on your keyboard will complete names of commands and files. Start typing a filename and hit tab twice to see all possible acceptable completions. If there is only one possibility, the rest of the name will be filled in for you.\n&lt;up&gt; - The &lt;up&gt; key will fill in the last command you ran. Hit it multiple times to cycle through the last commands you’ve entered.\nman &lt;command name&gt; - The man or manual command will provide information on any UNIX command. Try man ls, man grep, or man man.\nexit - Exit the terminal session. You can also use &lt;Control-d&gt;\nsudo - Run before a command to run it as an administrator. You will need to enter your password, and note that no asterisks or special characters will appear as you type.\nsu - Become the root user of the system. Your $ prompt will change to a # prompt.\n!! - Run the last command. To run the last command you entered with administrative privileges, use sudo !!\n* - refer to all files and folders in a directory, i.e., cat *.txt\nclear or &lt;Control-l&gt; - Clear the terminal window.\nwhich - Show where a command is stored on your system, i.e. which python\nhistory - See the previous commands you’ve entered in the terminal. Useful in conjunction with grep\ncp - Copy a file. cp file1 file2 will make a copy of file1 named file2. Can be used with the -r flag to copy whole folders.\nrm - This command can be dangerous, so use it carefully. Removes a file or files. If used with the wrong flags or in the wrong place, you can delete a lot of important files, so be careful with this one.\nrmdir - Remove an empty directory.\n. and .. - . Refers to the folder you’re in, while .. refers to the folder above.\n.hello.txt - Any file with a . in front of its name is a hidden file. You won’t see it in ls or in the GUI. To reveal hidden files, use ls -A\nping - Use ping google.com to see if your internet is working.\ndf -hl - Tells you how much hard drive space you have left.\ntop - Monitor which processes are using up your memory\nkill and killall - Kill a particular process or kill a category of processes by name. Try killall chrome or killall firefox\nsudo shutdown -r - Reboot the computer. shutdown -h turns off the computer.\ntime - Use before a command to find out how long that command takes to run.\nuptime - Tells how long your computer has been on.\n\n\ncal - Show a calendar.\ntelnet towel.blinkenlights.nl - Watch Star Wars in the terminal. Because.\nsay \"Hello there\" - Have your computer talk to you. (Use espeak on Linux.)\nFind so much more on the command line:\nBash manual - the no nonsense text descriptions of bash commands.\nexplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
+    "crumbs": [
+      "DSSF Syllabus",
+      "Resources",
+      "Commands"
     ]
   },
   {
@@ -265,331 +493,91 @@
     ]
   },
   {
-    "objectID": "sections/commands.html",
-    "href": "sections/commands.html",
-    "title": "Introduction to the Command Line",
-    "section": "",
-    "text": "&lt;&lt;&lt; Previous\n&lt;&lt;&lt; Return to introduction",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Commands"
-    ]
-  },
-  {
-    "objectID": "sections/commands.html#commands",
-    "href": "sections/commands.html#commands",
-    "title": "Introduction to the Command Line",
-    "section": "Commands",
-    "text": "Commands\npwd - show the current (or “working”) directory. Stands for “print working directory”\nls - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”\n\nls -1 - show the files and folders in a nice vertical column.\n\ncd - move to a directory, i.e. cd Desktop will move to the “Desktop” folder. Some special cases:\n\ncd .. - go to the directory above\ncd ~ go to your “home” directory, i.e. /Users/\ncd (by itself) also goes to the home directory\ncd - go to the last directory you were in before the current\ncd ../.. travel two directories up\ncd Documents/thesis-drafts move two directories, from the home folder to “thesis-drafts,” skipping “Documents”\n\ntouch &lt;filename&gt; - Create an empty text file named &lt;filename&gt; in your current directory.\natom &lt;filename&gt; - Open file in atom (and create it, if it does not already exist).\nmkdir &lt;folder name&gt; - Create a directory named &lt;folder name&gt; in the current working directory.\necho &lt;some text&gt; - Print out any text you give it. Often used with a redirect to add text to a file.\ncat &lt;filename&gt; - Print the contents of a file to the screen, in this case the contents of &lt;filename&gt;\n&gt; - Redirects printed output to a text file. For example echo \"this is some text\" &gt; hello.txt would put “this is some text” in a file called hello.txt\n&gt;&gt; - Redirect and append. If there’s already a file with text in it, this command will add that text to the file without destroying and recreating it.\n| - Pipe symbol. Takes output from one command and uses it as input for another command.\nless &lt;filename&gt; - Print out the contents of a file in a paginated form. Use &lt;Control-v&gt; and &lt;Alt-v&gt; (or &lt;Command-v and &lt;Option-v&gt;) to move up and down. Press q to quit.\nhead &lt;filename&gt; - Print the first section of a file (first 10 lines or other specified quantity)\ntail &lt;filename&gt; - Print the last section of a file (last 10 lines or other specified quantity)\nwc -l - Takes input and returns the number of lines in that input, as in cat &lt;filename&gt; | wc -l\nsort - Arrange lines in a file in numeric and alphabetical order.\nuniq - Remove duplicate lines from input, as in cat &lt;filename&gt; | uniq. To show the duplicate files, use uniq -d. Often most useful after using sort, since it only removed duplicates that are next to one another.\nmv - Move or rename a file. For example, mv file1 file2 will rename file to file2. You can also specify another destination, so that mv file1 ~ will move file1 to the home folder without renaming it.\nrm &lt;filename&gt; - Permanently remove a file from your computer.\nclear - Clears our terminal window of the command history (you can also type Control + l).\ngrep -i &lt;text&gt; - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”\nrev - Reverses the text you give it, i.e. echo \"Hello there\" | rev\nAlso check out other useful commands\n&lt;&lt;&lt; Return to introduction",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Commands"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Overview",
-    "section": "",
-    "text": "By this point in our academic careers, most of us have figured out some ways we like to interact with computers. Whether that involves avoiding them as much as possible or constantly testing new software, we likely have some ideas about how we feel comfortable getting things done. How would you show a person who had never seen a computer how to do something on your computer?\nMany of us would explain what a screen and a cursor are, and then show how to point and click on icons. This approach relies on a graphical user interface, or GUI (pronounced “gooey!”). Bust just as with any piece of technololgy, the GUI was introduced as a way of facilitating computer navigation. The GUI was never inate to computers. (For more see this 5min clip titled Mother of all Demos)\nIn this tutorial we’re going to explore another way to make your computer do things: through the command line. Instead of pointing and clicking, we’ll be typing in either git bash (Windows) or terminal (OSX) to tell the computer directly what task we’d like it to perform.\nWhile this new technique can seem intimidating if you haven’t used text-based interfaces before, luckily, you can use 90% of the functionality of the command line by becoming comfortable with a very small set of the most common commands.\nIn this session, we will:\n\nlearn common commands to create and display files (touch and echo)\nlearn commands to create directories (mkdir)\nnavigate our file structure using change directory (cd), print working directory (pwd), and list (ls)\nmove content from one place to another using redirects (&gt;) and pipes (|)\nexplore a comma separated values (.csv) dataset using word and line counts, head and tail, and the concatenate command cat\nsearch text files using the grep command\ncreate and sort cheat sheets for the commands we learn\n\nGet Started &gt;&gt;&gt;\nGlossary &gt;&gt;&gt;\n\nWhat is the command line?\nWorking with text\nWhy is the command line useful?\nGetting to the command line\nNavigation\nCreating files and folders\nCreating a cheat sheet\nPipes\nExploring text data\nSearching text data\nSummary of what we’ve covered\n\nResources\nCommands cheat sheet\nMore on text editors\nOther useful commands\nFurther challenges\nGlossary\n\nCurrent editor: Alice McGrath Past editors: Roberto Vargas, Alicia Peaker Based on previous work by Patrick Smyth, Mary Catherine McKinniburgh, Jojo Karlin, and Kelsey Chatlosh.\n\n\n\nCreative Commons License\n\n\nDigital Research Institute (DRI) Curriculum by Graduate Center Digital Initiatives is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. Based on a work at https://github.com/DHRI-Curriculum. When sharing this material or derivative works, preserve this paragraph, changing only the title of the derivative work, or provide comparable attribution.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Introduction"
-    ]
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site"
-  },
-  {
-    "objectID": "sections/challenges.html",
-    "href": "sections/challenges.html",
-    "title": "Further challenges",
-    "section": "",
-    "text": "&lt;&lt;&lt; Previous\n&lt;&lt;&lt; Return to introduction",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Further challenges"
-    ]
-  },
-  {
-    "objectID": "sections/challenges.html#challenge-1-create-hidden-file",
-    "href": "sections/challenges.html#challenge-1-create-hidden-file",
-    "title": "Further challenges",
-    "section": "Challenge #1: create hidden file",
-    "text": "Challenge #1: create hidden file\nUse the touch command to create a hidden file. Hidden files have a . in front of them, like this:\n$ ls -A\n.gitignore hello.txt\n$ ls\nhello.txt\nYou can also create hidden folders this way, but you only need to create a file to pass the challenge.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Further challenges"
-    ]
-  },
-  {
-    "objectID": "sections/challenges.html#challenge-2-create-an-alias",
-    "href": "sections/challenges.html#challenge-2-create-an-alias",
-    "title": "Further challenges",
-    "section": "Challenge #2: create an alias",
-    "text": "Challenge #2: create an alias\nAll these commands are great and all, but what if I want to make my own command? For example, maybe I want to make this happen:\n$ peptalk\nGood work\nTo do this, use the alias command:\n$ alias peptalk=\"echo Good work\"\nTo pass this challenge, make your own alias that does something different.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Further challenges"
-    ]
-  },
-  {
-    "objectID": "sections/challenges.html#challenge-3-make-a-permanent-alias",
-    "href": "sections/challenges.html#challenge-3-make-a-permanent-alias",
-    "title": "Further challenges",
-    "section": "Challenge #3: make a permanent alias",
-    "text": "Challenge #3: make a permanent alias\nSo you made an alias, but you realized it goes away when you close and reopen the terminal. (So unfair.) Make your alias permanent.\nTo do this, you will need to edit the configuration file that your terminal runs when it starts up. On Git Bash, that’s going to be called ~/.bashrc. (That’s a .bashrc file in your home folder.) On OSX, the file is called ~/.bash_profile. Just add the command you used to create the alias to the file with your text editor. Close and reopen the terminal to make sure your alias still works.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Further challenges"
-    ]
-  },
-  {
-    "objectID": "sections/challenges.html#challenge-4-create-your-own-shell-script",
-    "href": "sections/challenges.html#challenge-4-create-your-own-shell-script",
-    "title": "Further challenges",
-    "section": "Challenge #4: create your own shell script",
-    "text": "Challenge #4: create your own shell script\nDue to platform differences, Windows users should skip directly to Challenge #5.\nYou’re having fun with aliases, but are they REAL programs, or just glorified shortcuts?\nThis challenge is to create a bash script, a REAL program written in bash. To do this, create a text file (I’ll call this one goto-projects.sh) that begins with this line:\n#!/bin/bash\nUnder that, write some lines of bash that you want to be executed. How about a program that goes to your projects folder from wherever you are?\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nYour script should look like this when you’re done.\ngoto-projects.sh:\n#!/bin/bash\n\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nNow run this command to make your script executable. This gives your computer permission to run it as a program:\n$ chmod a+x goto-projects.sh\nNow run your program like this:\n$ ./goto-projects.sh",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Further challenges"
-    ]
-  },
-  {
-    "objectID": "sections/challenges.html#challenge-5-make-your-script-run-from-anywhere",
-    "href": "sections/challenges.html#challenge-5-make-your-script-run-from-anywhere",
-    "title": "Further challenges",
-    "section": "Challenge #5: make your script run from anywhere",
-    "text": "Challenge #5: make your script run from anywhere\n\nMac OS\nLast challenge! So you’ve made a real program in bash, you’re probably feeling pretty proud of yourself. Deservedly so. But you still need to be in a folder with your program, and you still need to use that annoying ./ to run it. Let’s make our program accessible from anywhere on the system by moving it to the /bin folder.\nThis challenge must be performed differently in Mac OS and in Windows using Git Bash.\n$ sudo mv goto-projects.sh /bin/goto-projects\nThis moves your script from its current folder to the /bin folder and renames it from goto-projects.sh to goto-projects. Now close your terminal with exit and reopen it. Type\n$ goto-projects\nfrom anywhere and see if that runs your script. If it does, congratulations! You’re a force to be reckoned with on the command line.\n\n\nWindows\nIn this final challenge, we’re going to write a real program in bash that can be used like any command on the command line.\nSince Git Bash doesn’t come with a sudo command that allows us to perform actions on folders that require special permissions, we’ll need to approach this final challenge a little differently.\nFirst, we’ll need to open our text editor, Atom, with special administrator permissions. Press the Windows button on your keyboard or click the start menu and type Atom into the search box. Do not click or hit Enter to open the Atom text editor. Instead, right click on the Atom icon and select the Run as Administrator option from the dropdown menu. If you are prompted to allow the program to be run with administrator privileges, select Yes.\nOnce Atom is open with administrator permissions, write out the following program:\n#!/bin/bash\n\n$ cd ~/Desktop/projects\n$ echo \"Now you're in $(pwd)\"\nThe first line of the program is a special line that lets the command line know which program to use to run the script. The other lines are bash (command line) commands that will be run one after the other when our bash script is executed. As you may be able to guess, this script will first go to our Desktop folder and then print out a message letting us know where we are.\nOnce our script is written out, save it in the following folder on your system:\nc:\\Program Files\\Git\\usr\\bin\nThis is a folder where Git Bash looks to determine which commands are available when it starts up. Enter goto-projects as the filename, and VS Code should automatically add a .sh extension, indicating that the file is a bash script.\nClose and reopen Git Bash. You should now be able to run your new command by typing\ngoto-projects.sh\nat the $ prompt. If the command isn’t appearing, you may want to use Git Bash to navigate to the /usr/bin folder and use ls to see if the command was saved correctly and what it is called.\n&lt;&lt;&lt; Return to introduction",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Further challenges"
-    ]
-  },
-  {
-    "objectID": "sections/creating-files-and-folders.html",
-    "href": "sections/creating-files-and-folders.html",
-    "title": "Creating files and folders",
+    "objectID": "sections/getting-to-the-command-line.html",
+    "href": "sections/getting-to-the-command-line.html",
+    "title": "Getting to the command line",
     "section": "",
     "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
-      "Creating files and folders"
+      "Getting to the command line"
     ]
   },
   {
-    "objectID": "sections/creating-files-and-folders.html#creating-a-file",
-    "href": "sections/creating-files-and-folders.html#creating-a-file",
-    "title": "Creating files and folders",
-    "section": "Creating a file",
-    "text": "Creating a file\nSo far, we’ve only performed commands that give us information. Let’s use a command that creates something on the computer.\nFirst, make sure you’re in the home directory:\n$ pwd\n/Users/jojo\nLet’s move to the Desktop folder, or “change directory” with cd:\n$ cd Desktop\nOnce you’ve made sure you’re in the Desktop folder with pwd, let’s try a new command:\n$ touch foo.txt\nIf the command succeeds, you won’t see any output. Now move the terminal window and look at your “real” desktop, the graphical one. See any differences? If the command was successful and you were in the right place, you should see an empty text file called “foo.txt” on the desktop. Pretty cool, right?",
+    "objectID": "sections/getting-to-the-command-line.html#mac-os",
+    "href": "sections/getting-to-the-command-line.html#mac-os",
+    "title": "Getting to the command line",
+    "section": "Mac OS",
+    "text": "Mac OS\nIf you’re using Mac OS:\n1. Click the Spotlight Search button (the magnifying glass) in the top right of your desktop.\n2. Type “terminal” into the bar that appears.\n3. Select the first item that appears in the list.\n4. The terminal will look like this:\n\n\n\nTerminal in Mac OS\n\n\nWhen you see the $, you’re in the right place. We call the $ the command prompt; the $ lets us know the computer is ready to receive a command.\nYou can change the color of your Terminal or BashShell background and text by selecting Shell from the top menu bar, then selecting a theme from the menu under New Window.\nBonus points: if you really want to get the groove of just typing instead of pointing and clicking, you can press “Command (⌘)” and the space bar at the same time to pull up Spotlight search, start typing “Terminal,” and then hit “Enter” to open a terminal window. This will pull up a terminal window without touching your mousepad. For super bonus points, try to navigate like this for the next fifteen minutes, or even the rest of this session–it is tricky and sometimes a bit tiring when you start, but you can really pick up speed when you practice!",
     "crumbs": [
       "DSSF Syllabus",
-      "Creating files and folders"
+      "Getting to the command line"
     ]
   },
   {
-    "objectID": "sections/creating-files-and-folders.html#handy-tip-up-arrow",
-    "href": "sections/creating-files-and-folders.html#handy-tip-up-arrow",
-    "title": "Creating files and folders",
-    "section": "Handy tip: up arrow",
-    "text": "Handy tip: up arrow\nLet’s say you liked that “foo.txt” file so much you’d like another! In the terminal window, press the “up arrow” on your keyboard. You’ll notice this populates the line with the command that you just wrote. You can hit “Enter” to create another “foo.txt,” (note - touch command will not overwrite your document nor will it add another document to the same directory, but it will update info about that file.) or you could use your left/right arrows to change the file name to “foot.txt” to create something different.\nAs we start to write more complicated and longer commands in our terminal, the “up arrow” is a great shortcut so you don’t have to spend lots of time typing.",
+    "objectID": "sections/getting-to-the-command-line.html#windows",
+    "href": "sections/getting-to-the-command-line.html#windows",
+    "title": "Getting to the command line",
+    "section": "Windows",
+    "text": "Windows\nWe won’t be using Windows’s own non-UNIX version of the command line. We installed Git Bash, following these instructions, so that we can work in the cross-platform Unix command line for this session.\n1. Look for Git Bash in your programs menu and open.\n2. If you can’t find the git folder, just type “git bash” in the search box and select “git bash” when it appears.\n3. Open the program.\n4. You know you’re in the right place when you see the $.",
     "crumbs": [
       "DSSF Syllabus",
-      "Creating files and folders"
+      "Getting to the command line"
     ]
   },
   {
-    "objectID": "sections/creating-files-and-folders.html#creating-folders",
-    "href": "sections/creating-files-and-folders.html#creating-folders",
-    "title": "Creating files and folders",
-    "section": "Creating folders",
-    "text": "Creating folders\nWe’re going to be doing a lot of work during the Digital Scholarship Research Institute. Let’s create a project folder in our Desktop so that we can keep all our work in one place.\nFirst, let’s check to make sure we’re still in the Desktop folder with pwd:\n$ pwd\n/Users/jojo/Desktop\nOnce you’ve double-checked you’re in Desktop, we’ll use the mkdir or “make directory” command to make a folder called “projects”:\n$ mkdir projects\nNow run ls to see if a projects folder has appeared. Once you confirm that the projects folder was created successfully, cd into it.\n$ cd projects\n$ pwd\n/Users/jojo/Desktop/projects\nOK, now you’ve got a projects folder that you can use throughout the DSRI. It should be visible on your graphical desktop, just like the foo.txt file we created earlier.\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "objectID": "sections/getting-to-the-command-line.html#command-prompt",
+    "href": "sections/getting-to-the-command-line.html#command-prompt",
+    "title": "Getting to the command line",
+    "section": "Command prompt $",
+    "text": "Command prompt $\n$, which we will refer to as the “command prompt,” is the place you type commands you wish the computer to execute. We will now learn some of the most common commands.\nIn the next section, we’ll learn how to navigate the filesystem in the command line.\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
-      "Creating files and folders"
+      "Getting to the command line"
     ]
   },
   {
-    "objectID": "sections/creating-files-and-folders.html#example",
-    "href": "sections/creating-files-and-folders.html#example",
-    "title": "Creating files and folders",
-    "section": "Example",
-    "text": "Example\n\n\n\nCreating files and folders",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Creating files and folders"
-    ]
-  },
-  {
-    "objectID": "sections/data.html",
-    "href": "sections/data.html",
-    "title": "Introduction to the Command Line",
+    "objectID": "sections/grep.html",
+    "href": "sections/grep.html",
+    "title": "Searching text data",
     "section": "",
     "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
-      "Exploring text data"
+      "Searching text data"
     ]
   },
   {
-    "objectID": "sections/data.html#exploring-text-data",
-    "href": "sections/data.html#exploring-text-data",
-    "title": "Introduction to the Command Line",
-    "section": "Exploring text data",
-    "text": "Exploring text data\nSo far the only text file we’ve been working with is our cheat sheet. Now, this is where the command line can be a very powerful tool: let’s try working with a large text file, one that would be too large to work with by hand.\nLet’s download the data we’re going to work with:\nDownload nypl_items.csv\nOur data set is a list of public domain items from the New York Public Library. It’s in .csv format, which is a plain text spreadsheet format. CSV stands for “comma separated values,” and each field in the spreadsheet is separated with a comma. It’s all still plain text, though, so we can manipulate the data using the command line.\n\nMove command\nOnce the file is downloaded, move it from your Downloads folder to the projects folder on your desktop–either through the command line, or drag and drop in the GUI. Since this is indeed a command line workshop, you should try the former!\nTo move this file using the command line, you first need to navigate to your Downloads folder where that file is saved. Then type the mv command followed by the name of the file you want to move and then the file path to your projects folder on your desktop, which is where you want to move that file to (note that ~ refers to your home folder):\nmv nypl_items.csv ~/Desktop/projects/  \nYou can then navigate to that projects folder and use the ls command to check that the file is now there.\n\n\nViewing data in the command line\nTry using cat to look at the data. You’ll find it all goes by too fast to get any sense of it. (You can click Control and C on your keyboard to cancel the output if it’s taking too long.)\nInstead, let’s use another tool, the less command, to get the data one page at a time:\n$ less nypl_items.csv\n[...]\nLess gives you a paginated view of the data; it will show you contents of a file or the output from a command or string of commands, page by page.\nTo view the file contents page by page, you may use the following keyboard shortcuts (that should work on Windows using Git Bash or on Mac): Click the f key to view forward one page, or the b key to view back one page.\nOnce you’re done, click the q key to return to the command line.\nLet’s try two more commands for viewing the contents of a file:\n$ head nypl_items.csv\n[...]\n$ tail nypl_items.csv\n[...]\nThese commands print out the very first (the “head”) and very last (the “tail”) sections of the file, respectively.\n\n\nInterlude for a super useful command line feature: tab completion.\nWhen you are navigating in the command line, typing folder and file names can seem to go against the promise of easier communication with your computer. Here comes tab completion, stage right!\nWhen you need to type out a file or folder name–for example, the name of that csv file we’ve been working with: nypl_items.csv–in the command line and want to move more quickly, you can just type out the beginning characters of that file name up until it’s distinct in that folder and then click the tab key. And voilà! Clicking that tab key will complete the rest of that name for you, and it only works if that file or folder already exists within your working directory.\nIn other words, anytime in the command line you can type as much of the file or folder name that is unique within that directory, and tab complete the rest!\n\n\nNote: Clearing Text\nIf all the text remaining in your terminal window is starting to overwhelm you, you have some options. You may type the clear command into the command line, or click the command and k keys to clear the scrollback. In Mac OS terminal, clicking the command and l keys will clear the output from your most recent command.\n\n\nCleaning the data\nWe didn’t tell you this before, but there are duplicate lines in our data! Two, to be exact. Before we try removing them, let’s see how many entries are in our .csv file:\n$ cat nypl_items.csv | wc -l\n100001\nThis tells us there are 100,001 lines in our file. The wc tool stands for “word count,” but it can also count characters and lines in a file. We tell wc to count lines by using the -l flag. If we wanted to count characters, we could use wc -m. Flags marked with hyphens, such as -l or -m, indicate options which belong to specific commands. See the glossary for more information about flags and options.\nTo find and remove duplicate lines, we can use the uniq command. Let’s try it out:\n$ cat nypl_items.csv | uniq | wc -l\n99999\nOK, the count went down by two because the uniq command removed the duplicate lines. But which lines were duplicated?\n$ $ cat nypl_items.csv | uniq -d\n[...]\nThe uniq command with the -d flag prints out the lines that have duplicates.\n\n\nChallenge\nUse the commands you’ve learned so far to create a new version of the nypl_items.csv file with the duplicated lines removed. (Hint: redirects are your friend.)\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;\n\n\n\nexploring data",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Exploring text data"
-    ]
-  },
-  {
-    "objectID": "sections/glossary.html",
-    "href": "sections/glossary.html",
-    "title": "Glossary",
-    "section": "",
-    "text": "pwd - show the current (or “working”) directory. Stands for “print working directory”\nls - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”\n\nls -1 - show the files and folders in a nice vertical column.\n\ncd - move to a directory, i.e. cd Desktop will move to the “Desktop” folder. Some special cases:\n\ncd .. - go to the directory above\ncd ~ go to your “home” directory, i.e. /Users/\ncd (by itself) also goes to the home directory\ncd - go to the last directory you were in before the current\ncd ../.. travel two directories up\ncd Documents/thesis-drafts move two directories, from the home folder to “thesis-drafts,” skipping “Documents”\n\ntouch &lt;filename&gt; - Create an empty text file named &lt;filename&gt; in your current directory.\natom &lt;filename&gt; - Open file in atom (and create it, if it does not already exist).\nmkdir &lt;folder name&gt; - Create a directory named &lt;folder name&gt; in the current working directory.\necho &lt;some text&gt; - Print out any text you give it. Often used with a redirect to add text to a file.\ncat &lt;filename&gt; - Print the contents of a file to the screen, in this case the contents of &lt;filename&gt;\n&gt; - Redirects printed output to a text file. For example echo \"this is some text\" &gt; hello.txt would put “this is some text” in a file called hello.txt\n&gt;&gt; - Redirect and append. If there’s already a file with text in it, this command will add that text to the file without destroying and recreating it.\n| - Pipe symbol. Takes output from one command and uses it as input for another command.\nless &lt;filename&gt; - Print out the contents of a file in a paginated form. Use &lt;Control-v&gt; and &lt;Alt-v&gt; (or &lt;Command-v and &lt;Option-v&gt;) to move up and down. Press q to quit.\nhead &lt;filename&gt; - Print the first section of a file (first 10 lines or other specified quantity)\ntail &lt;filename&gt; - Print the last section of a file (last 10 lines or other specified quantity)\nwc -l - Takes input and returns the number of lines in that input, as in cat &lt;filename&gt; | wc -l\nsort - Arrange lines in a file in numeric and alphabetical order.\nuniq - Remove duplicate lines from input, as in cat &lt;filename&gt; | uniq. To show the duplicate files, use uniq -d. Often most useful after using sort, since it only removed duplicates that are next to one another.\nmv - Move or rename a file. For example, mv file1 file2 will rename file to file2. You can also specify another destination, so that mv file1 ~ will move file1 to the home folder without renaming it.\nrm &lt;filename&gt; - Permanently remove a file from your computer.\nclear - Clears our terminal window of the command history (you can also type Control + l).\ngrep -i &lt;text&gt; - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”\nrev - Reverses the text you give it, i.e. echo \"Hello there\" | rev\nHere’s a list of other useful commands\n\n\n\nbash - The programming language used in the command line. (Yes, we tricked you, you’re already programming!) Short for “Born Again SHell,” for reasons people on the internet will happily tell you about.\ncli - “Command Language Interpreter,” this is a super technical term for the command line used to impress everyone around you.\nthe shell - The part of an operating system that interacts with a human. Technically, anything you do in a graphical interface is also in a shell, but in practice this is just another synonym for the command line.\nthe terminal - Particularly used to refer to the command line on OSX. This term made more sense when universities used mainframes and every computer was only a terminal.\n\n\n\nargument - In the command line, an argument is an item or parameter that you give a program when you start it. For instance, if you\ncommand - A specific task or function given to a computer application (Terminal or Bash in this tutorial) to perform some kind of task or function. At first it may seem like aribtrary letters are pulled out of thin air to enact some sort of magic. In fact, these commands (mkdir, ls, etc.) have been written by people to fulfill express functions. Options (see below) were developed for specific commands based on the commands’ functions. Most users only need a small set of the commands that come pre-installed in their command line interface to complete their desired tasks.\ndirectory - A folder on your hard drive.\nflag - Otherwise known as an option or switch, a flag provides additional information for how you wish a program to run. For instance, when executing the command grep, you may want to add the flag -i to ignore capitalization. If you wish to know what flags belond to particular commands, you can check the m\nGUI - “Graphical User Interface.” Pronounced “gooey,” like delicious gooey chocolate. Basically, anything on a computer that isn’t in the command line. All familiar elements of day-to-day computer tasks such as images, windows, prompts, buttons, and progress bars are part of the GUI. The way most people interact with computers. Some tasks can only be done in a GUI, while others can only be done in the command line.\noption - See flag\npath - A list of folders on your system that are checked for programs to generate the list of commands available on the command line. For example, since the folder /bin is typically on the path, putting an executable program in that folder will make it available as a command.\npipeline - In the command line, a pipeline is a sequence of processes. The output of one command feeds directly as input into the next command.\nprompt - The $ is known as the “prompt.” It indicates that your command line is ready to receive commands.\nREPL - “Read Eval Print Loop” The process of typing something in to the command line and getting something back out. Like most things to do with the command line, not as complicated (or scary) as it sounds.\nroot - A word for the administrative user on a system. You often need administrative privileges to install programs or access certain system folders using the command line. You can tell you’re root when your $ prompt turns into a # prompt. To become root, type su and enter the password you use to log in. (No characters or asterisks will appear, just type your password and press enter.) You can also run a single command as root by typing sudo before the command.\nText editor - A program for creating and editing plain text files. Unlike word processors such as LibreOffice and MS Word, which create complex documents in the form of archives that include formatting information and other metadata, a plain text editor creates a single file. Programmers tend to use plain text files because computers can work with them easily. Atom, Sublime Text, Nano, and VI are examples of text editors.\nUNIX - A family of operating systems that have a multi-user model and a particular design philosophy. Both OSX and Linux are UNIXes. Windows is not.\nwildcard * - The wildcard character on the command line will revolutionize your world. When you are giving a command an argument, for instance instead of\ngrep filename.txt\ntype\ngrep *.txt\nThe wildcard, *, will tell the command to search for any file ending with a .txt extension. But the wildcard can work anywhere in the string! If, for example, you want to move all formats (.doc, .pdf, .jpg) of the same name to a different folder you would type:\nmv [filename.*] [foldername]\n\n\n\nBash manual - the no nonsense text descriptions of bash commands.\nExplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "sections/glossary.html#commands",
-    "href": "sections/glossary.html#commands",
-    "title": "Glossary",
-    "section": "",
-    "text": "pwd - show the current (or “working”) directory. Stands for “print working directory”\nls - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”\n\nls -1 - show the files and folders in a nice vertical column.\n\ncd - move to a directory, i.e. cd Desktop will move to the “Desktop” folder. Some special cases:\n\ncd .. - go to the directory above\ncd ~ go to your “home” directory, i.e. /Users/\ncd (by itself) also goes to the home directory\ncd - go to the last directory you were in before the current\ncd ../.. travel two directories up\ncd Documents/thesis-drafts move two directories, from the home folder to “thesis-drafts,” skipping “Documents”\n\ntouch &lt;filename&gt; - Create an empty text file named &lt;filename&gt; in your current directory.\natom &lt;filename&gt; - Open file in atom (and create it, if it does not already exist).\nmkdir &lt;folder name&gt; - Create a directory named &lt;folder name&gt; in the current working directory.\necho &lt;some text&gt; - Print out any text you give it. Often used with a redirect to add text to a file.\ncat &lt;filename&gt; - Print the contents of a file to the screen, in this case the contents of &lt;filename&gt;\n&gt; - Redirects printed output to a text file. For example echo \"this is some text\" &gt; hello.txt would put “this is some text” in a file called hello.txt\n&gt;&gt; - Redirect and append. If there’s already a file with text in it, this command will add that text to the file without destroying and recreating it.\n| - Pipe symbol. Takes output from one command and uses it as input for another command.\nless &lt;filename&gt; - Print out the contents of a file in a paginated form. Use &lt;Control-v&gt; and &lt;Alt-v&gt; (or &lt;Command-v and &lt;Option-v&gt;) to move up and down. Press q to quit.\nhead &lt;filename&gt; - Print the first section of a file (first 10 lines or other specified quantity)\ntail &lt;filename&gt; - Print the last section of a file (last 10 lines or other specified quantity)\nwc -l - Takes input and returns the number of lines in that input, as in cat &lt;filename&gt; | wc -l\nsort - Arrange lines in a file in numeric and alphabetical order.\nuniq - Remove duplicate lines from input, as in cat &lt;filename&gt; | uniq. To show the duplicate files, use uniq -d. Often most useful after using sort, since it only removed duplicates that are next to one another.\nmv - Move or rename a file. For example, mv file1 file2 will rename file to file2. You can also specify another destination, so that mv file1 ~ will move file1 to the home folder without renaming it.\nrm &lt;filename&gt; - Permanently remove a file from your computer.\nclear - Clears our terminal window of the command history (you can also type Control + l).\ngrep -i &lt;text&gt; - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”\nrev - Reverses the text you give it, i.e. echo \"Hello there\" | rev\nHere’s a list of other useful commands",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "sections/glossary.html#synonyms-for-the-command-line",
-    "href": "sections/glossary.html#synonyms-for-the-command-line",
-    "title": "Glossary",
-    "section": "",
-    "text": "bash - The programming language used in the command line. (Yes, we tricked you, you’re already programming!) Short for “Born Again SHell,” for reasons people on the internet will happily tell you about.\ncli - “Command Language Interpreter,” this is a super technical term for the command line used to impress everyone around you.\nthe shell - The part of an operating system that interacts with a human. Technically, anything you do in a graphical interface is also in a shell, but in practice this is just another synonym for the command line.\nthe terminal - Particularly used to refer to the command line on OSX. This term made more sense when universities used mainframes and every computer was only a terminal.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "sections/glossary.html#other-terms",
-    "href": "sections/glossary.html#other-terms",
-    "title": "Glossary",
-    "section": "",
-    "text": "argument - In the command line, an argument is an item or parameter that you give a program when you start it. For instance, if you\ncommand - A specific task or function given to a computer application (Terminal or Bash in this tutorial) to perform some kind of task or function. At first it may seem like aribtrary letters are pulled out of thin air to enact some sort of magic. In fact, these commands (mkdir, ls, etc.) have been written by people to fulfill express functions. Options (see below) were developed for specific commands based on the commands’ functions. Most users only need a small set of the commands that come pre-installed in their command line interface to complete their desired tasks.\ndirectory - A folder on your hard drive.\nflag - Otherwise known as an option or switch, a flag provides additional information for how you wish a program to run. For instance, when executing the command grep, you may want to add the flag -i to ignore capitalization. If you wish to know what flags belond to particular commands, you can check the m\nGUI - “Graphical User Interface.” Pronounced “gooey,” like delicious gooey chocolate. Basically, anything on a computer that isn’t in the command line. All familiar elements of day-to-day computer tasks such as images, windows, prompts, buttons, and progress bars are part of the GUI. The way most people interact with computers. Some tasks can only be done in a GUI, while others can only be done in the command line.\noption - See flag\npath - A list of folders on your system that are checked for programs to generate the list of commands available on the command line. For example, since the folder /bin is typically on the path, putting an executable program in that folder will make it available as a command.\npipeline - In the command line, a pipeline is a sequence of processes. The output of one command feeds directly as input into the next command.\nprompt - The $ is known as the “prompt.” It indicates that your command line is ready to receive commands.\nREPL - “Read Eval Print Loop” The process of typing something in to the command line and getting something back out. Like most things to do with the command line, not as complicated (or scary) as it sounds.\nroot - A word for the administrative user on a system. You often need administrative privileges to install programs or access certain system folders using the command line. You can tell you’re root when your $ prompt turns into a # prompt. To become root, type su and enter the password you use to log in. (No characters or asterisks will appear, just type your password and press enter.) You can also run a single command as root by typing sudo before the command.\nText editor - A program for creating and editing plain text files. Unlike word processors such as LibreOffice and MS Word, which create complex documents in the form of archives that include formatting information and other metadata, a plain text editor creates a single file. Programmers tend to use plain text files because computers can work with them easily. Atom, Sublime Text, Nano, and VI are examples of text editors.\nUNIX - A family of operating systems that have a multi-user model and a particular design philosophy. Both OSX and Linux are UNIXes. Windows is not.\nwildcard * - The wildcard character on the command line will revolutionize your world. When you are giving a command an argument, for instance instead of\ngrep filename.txt\ntype\ngrep *.txt\nThe wildcard, *, will tell the command to search for any file ending with a .txt extension. But the wildcard can work anywhere in the string! If, for example, you want to move all formats (.doc, .pdf, .jpg) of the same name to a different folder you would type:\nmv [filename.*] [foldername]",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "sections/glossary.html#other-command-line-resources",
-    "href": "sections/glossary.html#other-command-line-resources",
-    "title": "Glossary",
-    "section": "",
-    "text": "Bash manual - the no nonsense text descriptions of bash commands.\nExplain shell - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.\nEasy shell guide - a friendly, styled (pastel!) list of common commands you might want to try out.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "Glossary"
-    ]
-  },
-  {
-    "objectID": "sections/navigation.html",
-    "href": "sections/navigation.html",
-    "title": "Navigation",
-    "section": "",
-    "text": "&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Navigation"
-    ]
-  },
-  {
-    "objectID": "sections/navigation.html#prefatory-pro-tips",
-    "href": "sections/navigation.html#prefatory-pro-tips",
-    "title": "Navigation",
-    "section": "Prefatory pro tips",
-    "text": "Prefatory pro tips\nGo slow at first and check your spelling!\nOne of the biggest things you can do to make sure your code runs correctly and you can use the command line successfully is to make sure you check your spelling! Keep this in mind today, this week, and your whole life. If at first something doesn’t work, check your spelling! Unlike in human reading, where letters operate simultaneously as atomistic symbols and as complex contingencies (check Johanna Drucker on the alphabet), in coding, each character has a discrete function including (especially!) spaces.\nKeep in mind that the command line and file systems on Mac OS and Unix are usually pre-configured as cAsE-pReSeRvInG–so capitalizations also matter when typing commands and file and folder names.\nAlso, while copying and pasting from this handy tutorial may be tempting to avoid spelling errors and other things, we encourage you not to! Typing out each command will help you remember them and how they work.\n\nGetting started: know thyself\nYou may also see your username to the left of the command prompt $. Let’s try our first command. Type the following and press the enter key:\n$ whoami\nThe whoami command should print out your username. Congrats, you’ve executed your first command! This is a basic pattern of use in the command line: type a command, press enter on your keyboard, and receive output.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Navigation"
-    ]
-  },
-  {
-    "objectID": "sections/navigation.html#orienting-yourself-in-the-command-line-folders",
-    "href": "sections/navigation.html#orienting-yourself-in-the-command-line-folders",
-    "title": "Navigation",
-    "section": "Orienting yourself in the command line: folders",
-    "text": "Orienting yourself in the command line: folders\nOK, we’re going to try another command. But first, let’s make sure we understand some things about how your computer’s filesystem works.\nYour computer’s files are organized in what’s known as a hierarchical filesystem. That means there’s a top level or “root” folder on your system. That folder has other folders in it, and those folders have folders in them, and so on. You can draw these relationships in a tree:\nUsers\n|\n-- jojokarlin\n  |\n  -- Applications\n  -- Desktop\n  -- Documents\nThe root or highest-level folder on OSX is just called /. We won’t need to go in there, though, since that’s mostly just files for the operating system. On Windows, the root directory is usually called C: (More on why C is default on Windows.).\nNote that we are using the word “directory” interchangeably with “folder”–they both refer to the same thing.\nOK, let’s try a command that tells us where we are in the filesystem:\n$ pwd\nYou should get output like /Users/jojo. That means you’re in the jojo directory in the Users folder inside the / or root directory. On Windows, your output would instead be C:/Users/jojo. The folder you’re in is called the working directory, and pwd stands for “print working directory.”\nThe command pwd won’t actually print anything except on your screen. This command is easier to grasp when we interpret “print” as “display.”\nOK, we know where we are. But what if we want to know what files and folders are in the jojo directory, a.k.a. the working directory?\nTry entering:\n$ ls\nYou should see a number of folders, probably including Documents, Desktop, and so on. You may also see some files. These are the contents of the current working directory. ls will “list” the contents of the directory you are in.\nWonder what’s in the Desktop folder? Let’s try navigating to it with the following command:\n$ cd Desktop\nThe cd command lets us “change directory.”\n(Make sure the “D” in “Desktop” is capitalized. ) If the command was successful, you won’t see any output. This is normal —- often, the command line will succeed silently.\nSo how do we know it worked? That’s right, let’s use our pwd command again. We should get:\n$ pwd\n/Users/jojo/Desktop\nNow try ls again to see what’s on your desktop. These three commands—pwd, ls, and cd—are the most commonly used in the terminal. Between them, you can orient yourself and move around.\nBefore we move on, let’s take a minute to navigate through our computer’s file system using the command line.",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Navigation"
-    ]
-  },
-  {
-    "objectID": "sections/navigation.html#challenge",
-    "href": "sections/navigation.html#challenge",
-    "title": "Navigation",
+    "objectID": "sections/grep.html#challenge",
+    "href": "sections/grep.html#challenge",
+    "title": "Searching text data",
     "section": "Challenge",
-    "text": "Challenge\nUse the three commands you’ve just learned—pwd, ls and cd—eight (8) times each. Go poking around your Photos folder, or see what’s so special about that root / directory. When you’re done, come back to the home folder with\ncd ~\n(That’s a tilde, usually found on the top left of a US keyboard.) One more command you might find useful is\ncd ..\nwhich will move you one directory up in the filesystem. That’s a cd with two periods after it.",
+    "text": "Challenge\nUse the grep command to explore our .csv file a bit. What areas are best covered by the data set?\nIf you want to get a little more mileage out of the grep command, refer to this tutorial on grep and regular expressions. Regular expressions provide ways to search for text in more advanced ways, including specific wildcards, matching ranges of characters such as letters and numbers, and detecting features such as the beginning and end of lines.",
     "crumbs": [
       "DSSF Syllabus",
-      "Navigation"
+      "Searching text data"
     ]
   },
   {
-    "objectID": "sections/navigation.html#compare-with-the-gui",
-    "href": "sections/navigation.html#compare-with-the-gui",
-    "title": "Navigation",
-    "section": "Compare with the GUI",
-    "text": "Compare with the GUI\nIt’s important to note that this is the same old information you can get by pointing and clicking displayed to you in a different way.\nGo ahead and use pointing and clicking to navigate to your working directory–you can get there a few ways, but try starting from “My Computer” and clicking down from there. You’ll notice that the folder names should match the ones that the command line spits out for you, since it’s the same information! We’re just using a different mode of navigation around your computer to see it.",
+    "objectID": "sections/grep.html#before-we-finish",
+    "href": "sections/grep.html#before-we-finish",
+    "title": "Searching text data",
+    "section": "Before we finish…",
+    "text": "Before we finish…\nBefore we finish, we’re going to prepare a little for our upcoming sessions. In your projects folder on the desktop, we’re going to create a folder to house our cheat sheets for the week, as well as a new folder for the upcoming github and tidydata workshops.\n$ pwd\n/Users/jojo/Desktop/projects\n$ mkdir cheatsheets\n$ mkdir webdev\n$ mkdir tidydata\nThen move your cheat-sheet.txt file into your cheatsheets folder with the mv command:\n$ mv cheat-sheet.txt cheatsheets\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;\nGo to other commands &gt;&gt;&gt;\nGo to further challenges &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
-      "Navigation"
+      "Searching text data"
     ]
   },
   {
-    "objectID": "sections/navigation.html#hot-tip",
-    "href": "sections/navigation.html#hot-tip",
-    "title": "Navigation",
-    "section": "Hot Tip",
-    "text": "Hot Tip\nSometimes, you can see a folder in your GUI, but you aren’t sure where it is buried in your file system. You can drag a file or folder into the terminal and it will print the full path to that file or directory!\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "objectID": "sections/grep.html#example",
+    "href": "sections/grep.html#example",
+    "title": "Searching text data",
+    "section": "Example",
+    "text": "Example\n\n\n\nSearching a text file with grep",
     "crumbs": [
       "DSSF Syllabus",
-      "Navigation"
-    ]
-  },
-  {
-    "objectID": "sections/navigation.html#example",
-    "href": "sections/navigation.html#example",
-    "title": "Navigation",
-    "section": "Example:",
-    "text": "Example:\n\n\n\nNavigating the command line",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Navigation"
+      "Searching text data"
     ]
   },
   {
@@ -617,20 +605,8 @@
   {
     "objectID": "sections/text-editors-ides.html",
     "href": "sections/text-editors-ides.html",
-    "title": "Introduction to the Command Line",
+    "title": "More Information about Text Editors",
     "section": "",
-    "text": "&lt;&lt;&lt; Previous\n&lt;&lt;&lt; Return to introduction",
-    "crumbs": [
-      "DSSF Syllabus",
-      "Resources",
-      "More Information about Text Editors"
-    ]
-  },
-  {
-    "objectID": "sections/text-editors-ides.html#more-information-about-text-editors",
-    "href": "sections/text-editors-ides.html#more-information-about-text-editors",
-    "title": "Introduction to the Command Line",
-    "section": "More Information about Text Editors",
     "text": "More Information about Text Editors\n\nEditors vs. IDEs\nWhen it comes to editing text and writing code, you can use either a text editor or an IDE (Integrated Development Environment). Text editors tend to be more lightweight solutions, while IDEs try to provide a lot of features to help you write code and tend to target specific languages. There are a lot of exceptions to that description, but the distinction isn’t that important. Just know that editors will sometimes describe themselves as IDEs, and that there’s a slight difference in philosophy between them.\n\n\nWhich Text Editor Should I Choose?\n\nOSX\n\nTextwrangler - Simple graphical text editor that is easy to use. If you’re used to the Mac way of doing things, TextWrangler should make sense to you. One potential disadvantage is that Textwrangler won’t do things like automatically indent Python code.\nnano - GNU nano is a text editor that comes pre-installed in the OSX terminal. nano runs within your terminal window and can be surprising if you aren’t aware of its presence. For some operations (say you forget to write a commit message in git), nano will open so that you can insert text.\n\nIf in your terminal you type:\nnano filename.txt\nYou will open the nano editor in the command line. You’ll see your terminal change to look something like this:\n\n\n\nImage of what nano looks like when you open it\n\n\nWhen you’re done typing to add text to the file, you can save the file by performing these three actions:\n\nHold control and press x.\nWhen it asks if you want to save, press  for “yes.”\nYou’ll see the path to the file in the bar. Press  to confirm and your window will resume its command line identity.\n\n\n\n\nPlatform Independent\n\nAtom - Atom is a git and GitHub focused editor. It has advantages if you decide to work a lot with GitHub tools like GitBooks and GitHub Pages.\n\n\nFully Customized\n\nEmacs - If you are the sort of person who wants full control of your computer’s functions, who seeks the power of ORG mode, and who wishes to learn keyboard shortcuts that work across functions, GNU Emacs is the software for you. Emacs requires a fair amount of set-up, but the payoff is that you wind up with the set-up that suits your work habits.\n\n\n\nIntegrated Development Environment [IDE]\nAs mentioned above, IDEs offer more functions for testing code and running programs. Depending on the amount and type of programming you are doing, an IDE might be overkill. The IDE Index shows relative popularity of editors and IDEs based on search frequency.\n\nIDLEhttps://docs.python.org/2/library/idle.html - The default Python IDE that comes bundled with every download of Python. Simple to use and good for beginners to Python. Not very polished and lacks advanced features.\nSpyder and PyCharm - These are Python-specific IDEs. They have more bells and whistles than a standard text editor like Textwrangler, but they’re meant specifically for working with Python. Spyder is free and comes bundled with Anaconda. PyCharm is not free, but some people prefer it for working with Python on the web.",
     "crumbs": [
       "DSSF Syllabus",

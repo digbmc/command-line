@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/commands.html">Resources</a></li><li class="breadcrumb-item"><a href="../sections/glossary.html">Glossary</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/commands.html">Resources</a></li><li class="breadcrumb-item"><a href="../sections/glossary.html">Glossary of terms</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -211,12 +211,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/other-commands.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Other useful commands</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../sections/challenges.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Further challenges</span></a>
   </div>
@@ -224,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/glossary.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Glossary</span></a>
+ <span class="menu-text">Glossary of terms</span></a>
   </div>
 </li>
       </ul>
@@ -239,9 +233,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#glossary" id="toc-glossary" class="nav-link active" data-scroll-target="#glossary">Glossary</a>
+  <li><a href="#glossary-of-terms" id="toc-glossary-of-terms" class="nav-link active" data-scroll-target="#glossary-of-terms">Glossary of terms</a>
   <ul class="collapse">
-  <li><a href="#commands" id="toc-commands" class="nav-link" data-scroll-target="#commands">Commands</a></li>
   <li><a href="#synonyms-for-the-command-line" id="toc-synonyms-for-the-command-line" class="nav-link" data-scroll-target="#synonyms-for-the-command-line">Synonyms for the command line</a></li>
   <li><a href="#other-terms" id="toc-other-terms" class="nav-link" data-scroll-target="#other-terms">Other Terms</a></li>
   <li><a href="#other-command-line-resources" id="toc-other-command-line-resources" class="nav-link" data-scroll-target="#other-command-line-resources">Other command line resources</a></li>
@@ -255,45 +248,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="glossary" class="level1">
-<h1>Glossary</h1>
-<section id="commands" class="level2">
-<h2 class="anchored" data-anchor-id="commands">Commands</h2>
-<p><code>pwd</code> - show the current (or “working”) directory. Stands for “print working directory”</p>
-<p><code>ls</code> - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”</p>
-<ul>
-<li><code>ls -1</code> - show the files and folders in a nice vertical column.</li>
-</ul>
-<p><code>cd</code> - move to a directory, i.e.&nbsp;<code>cd Desktop</code> will move to the “Desktop” folder. Some special cases:</p>
-<ul>
-<li><code>cd ..</code> - go to the directory above</li>
-<li><code>cd ~</code> go to your “home” directory, i.e.&nbsp;/Users/<yourname></yourname></li>
-<li><code>cd</code> (by itself) also goes to the home directory</li>
-<li><code>cd -</code> go to the last directory you were in before the current</li>
-<li><code>cd ../..</code> travel two directories up</li>
-<li><code>cd Documents/thesis-drafts</code> move two directories, from the home folder to “thesis-drafts,” skipping “Documents”</li>
-</ul>
-<p><code>touch &lt;filename&gt;</code> - Create an empty text file named <code>&lt;filename&gt;</code> in your current directory.</p>
-<p><code>atom &lt;filename&gt;</code> - Open file in atom (and create it, if it does not already exist).</p>
-<p><code>mkdir &lt;folder name&gt;</code> - Create a directory named <code>&lt;folder name&gt;</code> in the current working directory.</p>
-<p><code>echo &lt;some text&gt;</code> - Print out any text you give it. Often used with a redirect to add text to a file.</p>
-<p><code>cat &lt;filename&gt;</code> - Print the contents of a file to the screen, in this case the contents of <code>&lt;filename&gt;</code></p>
-<p><code>&gt;</code> - Redirects printed output to a text file. For example <code>echo "this is some text" &gt; hello.txt</code> would put “this is some text” in a file called hello.txt</p>
-<p><code>&gt;&gt;</code> - Redirect and append. If there’s already a file with text in it, this command will add that text to the file without destroying and recreating it.</p>
-<p><code>|</code> - Pipe symbol. Takes output from one command and uses it as input for another command.</p>
-<p><code>less &lt;filename&gt;</code> - Print out the contents of a file in a paginated form. Use <code>&lt;Control-v&gt;</code> and <code>&lt;Alt-v&gt;</code> (or <code>&lt;Command-v</code> and <code>&lt;Option-v&gt;</code>) to move up and down. Press <code>q</code> to quit.</p>
-<p><code>head &lt;filename&gt;</code> - Print the first section of a file (first 10 lines or other specified quantity)</p>
-<p><code>tail &lt;filename&gt;</code> - Print the last section of a file (last 10 lines or other specified quantity)</p>
-<p><code>wc -l</code> - Takes input and returns the number of lines in that input, as in <code>cat &lt;filename&gt; | wc -l</code></p>
-<p><code>sort</code> - Arrange lines in a file in numeric and alphabetical order.</p>
-<p><code>uniq</code> - Remove duplicate lines from input, as in <code>cat &lt;filename&gt; | uniq</code>. To show the duplicate files, use <code>uniq -d</code>. Often most useful after using <code>sort</code>, since it only removed duplicates that are next to one another.</p>
-<p><code>mv</code> - Move or rename a file. For example, <code>mv file1 file2</code> will rename <code>file</code> to <code>file2</code>. You can also specify another destination, so that <code>mv file1 ~</code> will move file1 to the home folder without renaming it.</p>
-<p><code>rm &lt;filename&gt;</code> - Permanently remove a file from your computer.</p>
-<p><code>clear</code> - Clears our terminal window of the command history (you can also type <code>Control</code> + <code>l</code>).</p>
-<p><code>grep -i &lt;text&gt;</code> - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”</p>
-<p><code>rev</code> - Reverses the text you give it, i.e.&nbsp;<code>echo "Hello there" | rev</code></p>
-<p>Here’s a list of <a href="https://github.com/tri-cods/command-line/blob/master/sections/other-commands.md">other useful commands</a></p>
-</section>
+<section id="glossary-of-terms" class="level1">
+<h1>Glossary of terms</h1>
 <section id="synonyms-for-the-command-line" class="level2">
 <h2 class="anchored" data-anchor-id="synonyms-for-the-command-line">Synonyms for the command line</h2>
 <p><em>bash</em> - The programming language used in the command line. (Yes, we tricked you, you’re already programming!) Short for “Born Again SHell,” for reasons people on the internet will happily tell you about.</p>

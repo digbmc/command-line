@@ -212,12 +212,6 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/other-commands.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Other useful commands</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../sections/challenges.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Further challenges</span></a>
   </div>
@@ -225,7 +219,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../sections/glossary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Glossary</span></a>
+ <span class="menu-text">Glossary of terms</span></a>
   </div>
 </li>
       </ul>
@@ -240,7 +234,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#commands" id="toc-commands" class="nav-link active" data-scroll-target="#commands">Commands</a></li>
+  <li><a href="#commands" id="toc-commands" class="nav-link active" data-scroll-target="#commands">Commands</a>
+  <ul class="collapse">
+  <li><a href="#core-commands" id="toc-core-commands" class="nav-link" data-scroll-target="#core-commands">Core commands</a></li>
+  <li><a href="#other-useful-commands" id="toc-other-useful-commands" class="nav-link" data-scroll-target="#other-useful-commands">Other useful commands</a>
+  <ul class="collapse">
+  <li><a href="#not-particularly-useful-commands" id="toc-not-particularly-useful-commands" class="nav-link" data-scroll-target="#not-particularly-useful-commands">Not particularly useful commands</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -250,10 +251,10 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p><a href="../sections/grep.html">&lt;&lt;&lt; Previous</a><br>
-<a href="README.md">&lt;&lt;&lt; Return to introduction</a></p>
-<section id="commands" class="level2">
-<h2 class="anchored" data-anchor-id="commands">Commands</h2>
+<section id="commands" class="level1">
+<h1>Commands</h1>
+<section id="core-commands" class="level2">
+<h2 class="anchored" data-anchor-id="core-commands">Core commands</h2>
 <p><code>pwd</code> - show the current (or “working”) directory. Stands for “print working directory”</p>
 <p><code>ls</code> - show the files and folders in the working directory. I think of it as standing for “list stuff,” but it’s probably just short for “list.”</p>
 <ul>
@@ -287,10 +288,45 @@ ul.task-list li input[type="checkbox"] {
 <p><code>clear</code> - Clears our terminal window of the command history (you can also type <code>Control</code> + <code>l</code>).</p>
 <p><code>grep -i &lt;text&gt;</code> - Searches text and prints any line that matches a specified pattern (here “text”). “Grep” stands for “global regular expressions.”</p>
 <p><code>rev</code> - Reverses the text you give it, i.e.&nbsp;<code>echo "Hello there" | rev</code></p>
-<p>Also check out <a href="../sections/other-commands.html">other useful commands</a></p>
-<p><a href="README.md">&lt;&lt;&lt; Return to introduction</a></p>
+</section>
+<section id="other-useful-commands" class="level2">
+<h2 class="anchored" data-anchor-id="other-useful-commands">Other useful commands</h2>
+<p><code>&lt;tab&gt;</code> - The <code>&lt;tab&gt;</code> key on your keyboard will complete names of commands and files. Start typing a filename and hit tab twice to see all possible acceptable completions. If there is only one possibility, the rest of the name will be filled in for you.</p>
+<p><code>&lt;up&gt;</code> - The <code>&lt;up&gt;</code> key will fill in the last command you ran. Hit it multiple times to cycle through the last commands you’ve entered.</p>
+<p><code>man &lt;command name&gt;</code> - The <code>man</code> or manual command will provide information on any UNIX command. Try <code>man ls</code>, <code>man grep</code>, or <code>man man</code>.</p>
+<p><code>exit</code> - Exit the terminal session. You can also use <code>&lt;Control-d&gt;</code></p>
+<p><code>sudo</code> - Run before a command to run it as an administrator. You will need to enter your password, and note that no asterisks or special characters will appear as you type.</p>
+<p><code>su</code> - Become the root user of the system. Your <code>$</code> prompt will change to a <code>#</code> prompt.</p>
+<p><code>!!</code> - Run the last command. To run the last command you entered with administrative privileges, use <code>sudo !!</code></p>
+<p><code>*</code> - refer to all files and folders in a directory, i.e., <code>cat *.txt</code></p>
+<p><code>clear</code> or <code>&lt;Control-l&gt;</code> - Clear the terminal window.</p>
+<p><code>which</code> - Show where a command is stored on your system, i.e.&nbsp;<code>which python</code></p>
+<p><code>history</code> - See the previous commands you’ve entered in the terminal. Useful in conjunction with <code>grep</code></p>
+<p><code>cp</code> - Copy a file. <code>cp file1 file2</code> will make a copy of <code>file1</code> named <code>file2</code>. Can be used with the <code>-r</code> flag to copy whole folders.</p>
+<p><code>rm</code> - This command can be dangerous, so use it carefully. Removes a file or files. If used with the wrong flags or in the wrong place, you can delete a lot of important files, so be careful with this one.</p>
+<p><code>rmdir</code> - Remove an empty directory.</p>
+<p><code>.</code> and <code>..</code> - <code>.</code> Refers to the folder you’re in, while <code>..</code> refers to the folder above.</p>
+<p><code>.hello.txt</code> - Any file with a <code>.</code> in front of its name is a hidden file. You won’t see it in <code>ls</code> or in the GUI. To reveal hidden files, use <code>ls -A</code></p>
+<p><code>ping</code> - Use <code>ping google.com</code> to see if your internet is working.</p>
+<p><code>df -hl</code> - Tells you how much hard drive space you have left.</p>
+<p><code>top</code> - Monitor which processes are using up your memory</p>
+<p><code>kill</code> and <code>killall</code> - Kill a particular process or kill a category of processes by name. Try <code>killall chrome</code> or <code>killall firefox</code></p>
+<p><code>sudo shutdown -r</code> - Reboot the computer. <code>shutdown -h</code> turns off the computer.</p>
+<p><code>time</code> - Use before a command to find out how long that command takes to run.</p>
+<p><code>uptime</code> - Tells how long your computer has been on.</p>
+<section id="not-particularly-useful-commands" class="level3">
+<h3 class="anchored" data-anchor-id="not-particularly-useful-commands">Not particularly useful commands</h3>
+<p><code>cal</code> - Show a calendar.</p>
+<p><code>telnet towel.blinkenlights.nl</code> - Watch Star Wars in the terminal. Because.</p>
+<p><code>say "Hello there"</code> - Have your computer talk to you. (Use <code>espeak</code> on Linux.)</p>
+<p>Find so much more on the command line:</p>
+<p><a href="https://www.gnu.org/software/bash/manual/bashref.html">Bash manual</a> - the no nonsense text descriptions of bash commands.<br>
+<a href="https://explainshell.com/">explain shell</a> - a site that explains commands you paste into the form. This site is fantastic for breaking down commands you find in the wild on the internet.<br>
+<a href="https://lucasviola.github.io/easyshell/">Easy shell guide</a> - a friendly, styled (pastel!) list of common commands you might want to try out.</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
