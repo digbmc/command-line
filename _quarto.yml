@@ -16,7 +16,7 @@ website:
     style: "floating"
     contents:
       - href: index.qmd
-        text: Introduction
+        text: Overview
       - href: sections/what-is-the-command-line.md
         text: What is the command line?
       - href: sections/text-editors.md
