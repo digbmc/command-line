@@ -43,7 +43,6 @@ website:
         contents:
           - sections/commands.md
           - sections/text-editors-ides.md
-          - sections/other-commands.md
           - sections/challenges.md
           - sections/glossary.md
   page-footer: Bryn Mawr College Digital Scholarship, 2024
