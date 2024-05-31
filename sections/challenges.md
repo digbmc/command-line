@@ -1,6 +1,3 @@
-[<<< Previous](grep.md)  
-[<<< Return to introduction](README.md)
-
 # Further challenges
 
 These challenges are ordered from easiest to hardest.

@@ -1,7 +1,4 @@
-[<<< Previous](grep.md)  
-[<<< Return to introduction](README.md)
-
-## Commands
+# Commands
 
 `pwd` - show the current (or "working") directory. Stands for "print working directory"
 
@@ -57,5 +54,3 @@
 `rev` - Reverses the text you give it, i.e. `echo "Hello there" | rev`
 
 Also check out [other useful commands](other-commands.md)
-
-[<<< Return to introduction](README.md)
