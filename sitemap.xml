@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://digbmc.github.io/command-line/sections/why-is-the-command-line-useful.html</loc>
-    <lastmod>2024-05-29T19:47:07.911Z</lastmod>
+    <lastmod>2024-05-31T21:31:53.305Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/text-editors.html</loc>
-    <lastmod>2024-05-29T19:47:07.911Z</lastmod>
+    <lastmod>2024-05-31T21:30:39.487Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/summary.html</loc>
@@ -14,7 +14,7 @@
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/navigation.html</loc>
-    <lastmod>2024-05-29T19:47:07.909Z</lastmod>
+    <lastmod>2024-05-31T21:33:00.405Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/glossary.html</loc>
@@ -22,15 +22,15 @@
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/data.html</loc>
-    <lastmod>2024-05-29T19:47:07.835Z</lastmod>
+    <lastmod>2024-05-31T21:34:21.522Z</lastmod>
   </url>
   <url>
-    <loc>https://digbmc.github.io/command-line/sections/creating-files-and-folders.html</loc>
+    <loc>https://digbmc.github.io/command-line/sections/creating-a-cheat-sheet.html</loc>
     <lastmod>2024-05-29T19:47:07.804Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/challenges.html</loc>
-    <lastmod>2024-05-31T18:13:17.055Z</lastmod>
+    <lastmod>2024-05-31T21:36:27.425Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/about.html</loc>
@@ -38,27 +38,27 @@
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/index.html</loc>
-    <lastmod>2024-05-31T17:53:38.962Z</lastmod>
+    <lastmod>2024-05-31T21:35:45.854Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/commands.html</loc>
     <lastmod>2024-05-31T18:17:15.917Z</lastmod>
   </url>
   <url>
-    <loc>https://digbmc.github.io/command-line/sections/creating_a_cheat_sheet.html</loc>
-    <lastmod>2024-05-29T19:47:07.804Z</lastmod>
+    <loc>https://digbmc.github.io/command-line/sections/creating-files-and-folders.html</loc>
+    <lastmod>2024-05-31T21:34:03.886Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/getting-to-the-command-line.html</loc>
-    <lastmod>2024-05-29T19:47:07.835Z</lastmod>
+    <lastmod>2024-05-31T21:32:16.256Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/grep.html</loc>
-    <lastmod>2024-05-29T19:47:07.906Z</lastmod>
+    <lastmod>2024-05-31T21:36:43.953Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/pipes.html</loc>
-    <lastmod>2024-05-29T19:47:07.910Z</lastmod>
+    <lastmod>2024-05-31T21:34:21.527Z</lastmod>
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/text-editors-ides.html</loc>
@@ -66,6 +66,6 @@
   </url>
   <url>
     <loc>https://digbmc.github.io/command-line/sections/what-is-the-command-line.html</loc>
-    <lastmod>2024-05-29T19:47:07.911Z</lastmod>
+    <lastmod>2024-05-31T21:31:28.201Z</lastmod>
   </url>
 </urlset>

@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../sections/summary.html" rel="next">
-<link href="../sections/data.html" rel="prev">
+<link href="../sections/pipes.html" rel="next">
+<link href="../sections/creating-files-and-folders.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -105,7 +105,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/grep.html">Searching text data</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/creating-a-cheat-sheet.html">Creating a cheat sheet</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/creating-a-cheat-sheet.html" class="sidebar-item-text sidebar-link">
+  <a href="../sections/creating-a-cheat-sheet.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Creating a cheat sheet</span></a>
   </div>
 </li>
@@ -179,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../sections/grep.html" class="sidebar-item-text sidebar-link active">
+  <a href="../sections/grep.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Searching text data</span></a>
   </div>
 </li>
@@ -228,10 +228,14 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#searching-text-data" id="toc-searching-text-data" class="nav-link active" data-scroll-target="#searching-text-data">Searching text data</a>
+  <li><a href="#creating-a-cheat-sheet" id="toc-creating-a-cheat-sheet" class="nav-link active" data-scroll-target="#creating-a-cheat-sheet">Creating a cheat sheet</a>
   <ul class="collapse">
+  <li><a href="#echo" id="toc-echo" class="nav-link" data-scroll-target="#echo"><code>Echo</code></a></li>
+  <li><a href="#redirect" id="toc-redirect" class="nav-link" data-scroll-target="#redirect">Redirect (<code>&gt;</code>)</a></li>
+  <li><a href="#cat" id="toc-cat" class="nav-link" data-scroll-target="#cat"><code>Cat</code></a></li>
+  <li><a href="#a-note-on-file-naming" id="toc-a-note-on-file-naming" class="nav-link" data-scroll-target="#a-note-on-file-naming">A note on file naming</a></li>
+  <li><a href="#using-a-text-editor" id="toc-using-a-text-editor" class="nav-link" data-scroll-target="#using-a-text-editor">Using a text editor</a></li>
   <li><a href="#challenge" id="toc-challenge" class="nav-link" data-scroll-target="#challenge">Challenge</a></li>
-  <li><a href="#before-we-finish" id="toc-before-we-finish" class="nav-link" data-scroll-target="#before-we-finish">Before we finish…</a></li>
   <li><a href="#example" id="toc-example" class="nav-link" data-scroll-target="#example">Example</a></li>
   </ul></li>
   </ul>
@@ -243,42 +247,70 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="searching-text-data" class="level1">
-<h1>Searching text data</h1>
-<p>So we’ve cleaned our data set, but how do we find entries that use a particular term?</p>
-<p>Let’s say I want to find all the entries in our data set that use the term “Paris.”</p>
-<p>Here we can use the <code>grep</code> command. <code>grep</code> stands for “global regular expression print.” The <code>grep</code> command processes text line by line and prints any lines which match a specified pattern. Regular expressions are infamously human-illegible commands that use character by character matching to return a pattern. <code>grep</code> gives us access to the power of regular expressions as we search for text.</p>
-<pre><code>$ cat nypl_items.csv | grep -i "paris"
-[...]</code></pre>
-<p>This will print out all the lines that contain the word “Paris.” (The <code>-i</code> flag makes the command ignore capitalization.) Let’s use our <code>wc -l</code> command to see how many lines that is:</p>
-<pre><code>$ cat nypl_items.csv | grep -i "paris" | wc -l
-191</code></pre>
-<p>Here we have asked <code>cat</code> to read nypl_items.csv, take the output and pipe it into the <code>grep -i</code> command, which will ignore capitalization and find all instances of the word “paris.” We then take the output of that <code>grep</code> command and pipe it into the word count <code>wc</code> command with the <code>-l</code> lines option. The pipeline returns <code>191</code> letting us know that Paris (or paris) occurs on 191 lines of our data set.</p>
+<p><a href="../sections/creating-files-and-folders.html">&lt;&lt;&lt; Previous</a> | <a href="../sections/pipes.html">Next &gt;&gt;&gt;</a></p>
+<section id="creating-a-cheat-sheet" class="level1">
+<h1>Creating a cheat sheet</h1>
+<p>In this section, we’ll create a text file that we can use as a cheat sheet. You can use it to keep track of all the awesome commands you’re learning.</p>
+<section id="echo" class="level2">
+<h2 class="anchored" data-anchor-id="echo"><code>Echo</code></h2>
+<p>Instead of creating an empty file like we did with <code>touch</code>, let’s try creating a file with some text in it. But first, let’s learn a new command: <code>echo</code></p>
+<pre><code>$ echo "Hello from the command line"
+Hello from the command line</code></pre>
+</section>
+<section id="redirect" class="level2">
+<h2 class="anchored" data-anchor-id="redirect">Redirect (<code>&gt;</code>)</h2>
+<p>By default, the echo command just prints out the text we give it. Let’s use it to create a file with some text in it:</p>
+<pre><code>$ echo "This is my cheat sheet" &gt; cheat-sheet.txt</code></pre>
+<p>Now let’s check the contents of the directory:</p>
+<pre><code>$ pwd
+/Users/jojo/projects
+$ ls
+cheat-sheet.txt</code></pre>
+<p>OK, so the file has been created. But what was the <code>&gt;</code> in the command we used? On the command line, a <code>&gt;</code> is known as a “redirect.” It takes the output of a command and puts it in a file. Be careful, since it’s possible to overwrite files with the <code>&gt;</code> command.</p>
+<p>If you want to add text to a file but <em>not</em> overwrite it, you can use the <code>&gt;&gt;</code> command, known as the redirect and append command, instead. If there’s already a file with text in it, this command can add text to the file <em>without</em> destroying and recreating it.</p>
+</section>
+<section id="cat" class="level2">
+<h2 class="anchored" data-anchor-id="cat"><code>Cat</code></h2>
+<p>Let’s check if there’s any text in cheat-sheet.txt.</p>
+<pre><code>$ cat cheat-sheet.txt
+This is my cheat sheet</code></pre>
+<p>As you can see, the <code>cat</code> command prints the contents of a file to the screen. <code>cat</code> stands for “concatenate,” because it can link strings of characters or files together from end to end.</p>
+</section>
+<section id="a-note-on-file-naming" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-file-naming">A note on file naming</h2>
+<p>Your cheat sheet is titled <code>cheat-sheet.txt</code> instead of <code>cheat sheet.txt</code> for a reason. Can you guess why?</p>
+<p>Try to make a file titled <code>cheat sheet.txt</code> and report to the class what happens.</p>
+<p>Now imagine you’re attempting to open a very important data file using the command line that is titled <code>cheat sheet.txt</code>.</p>
+<p>For your digital best practices, we recommend making sure that file names contain no spaces–you can use creative capitalization, dashes, or underscores instead. Just keep in mind that the OS and Unix file systems are usually pre-configured as cAsE-pReSeRvInG, which means that capitalization matters when you type commands to navigate between or do things to directories and files.</p>
+</section>
+<section id="using-a-text-editor" class="level2">
+<h2 class="anchored" data-anchor-id="using-a-text-editor">Using a text editor</h2>
+<p>The challenge for this section will be using a text editor, specifically Atom (<a href="https://github.com/tri-cods/install/blob/master/sections/atom.md">install guide here</a>), to add some of the commands that we’ve learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems.</p>
+</section>
 <section id="challenge" class="level2">
 <h2 class="anchored" data-anchor-id="challenge">Challenge</h2>
-<p>Use the <code>grep</code> command to explore our .csv file a bit. What areas are best covered by the data set?</p>
-<p>If you want to get a little more mileage out of the grep command, refer to <a href="https://www.digitalocean.com/community/tutorials/using-grep-regular-expressions-to-search-for-text-patterns-in-linux">this tutorial on grep and regular expressions</a>. Regular expressions provide ways to search for text in more advanced ways, including specific wildcards, matching ranges of characters such as letters and numbers, and detecting features such as the beginning and end of lines.</p>
-</section>
-<section id="before-we-finish" class="level2">
-<h2 class="anchored" data-anchor-id="before-we-finish">Before we finish…</h2>
-<p>Before we finish, we’re going to prepare a little for our upcoming sessions. In your projects folder on the desktop, we’re going to create a folder to house our cheat sheets for the week, as well as a new folder for the upcoming github and tidydata workshops.</p>
-<pre><code>$ pwd
-/Users/jojo/Desktop/projects
-$ mkdir cheatsheets
-$ mkdir webdev
-$ mkdir tidydata</code></pre>
-<p>Then move your <code>cheat-sheet.txt</code> file into your <code>cheatsheets</code> folder with the <code>mv</code> command:</p>
-<pre><code>$ mv cheat-sheet.txt cheatsheets</code></pre>
-<p><a href="../sections/data.html">&lt;&lt;&lt; Previous</a> | <a href="../sections/summary.html">Next &gt;&gt;&gt;</a></p>
-<p><a href="other-commands.md">Go to other commands &gt;&gt;&gt;</a><br>
-<a href="../sections/challenges.html">Go to further challenges &gt;&gt;&gt;</a></p>
+<p>Open your new cheat-sheet-txt. file in the Atom text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows–and then click “File” and then “Open” from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file.</p>
+<p>Now that you’ve got your cheat sheet open in the Atom text editor, type to add the commands we’ve learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.</p>
+<p>Save the file.</p>
+<p>Once you’re done, check the contents of the file on the command line with the <code>cat</code> command:</p>
+<pre><code>$ cat cheat-sheet.txt
+My Institute Cheat Sheet
+
+ls
+lists files and folders in a directory
+
+cd ~
+change directory to home folder
+
+...</code></pre>
+<p><a href="../sections/creating-files-and-folders.html">&lt;&lt;&lt; Previous</a> | <a href="../sections/pipes.html">Next &gt;&gt;&gt;</a></p>
 </section>
 <section id="example" class="level2">
 <h2 class="anchored" data-anchor-id="example">Example</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="grep.gif" class="img-fluid figure-img"></p>
-<figcaption>Searching a text file with grep</figcaption>
+<p><img src="cheat-sheet.gif" class="img-fluid figure-img"></p>
+<figcaption>Creating a Cheat Sheet</figcaption>
 </figure>
 </div>
 
@@ -698,13 +730,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../sections/data.html" class="pagination-link" aria-label="Exploring text data">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Exploring text data</span>
+      <a href="../sections/creating-files-and-folders.html" class="pagination-link" aria-label="Creating files and folders">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Creating files and folders</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../sections/summary.html" class="pagination-link" aria-label="Summary of what we've covered">
-        <span class="nav-page-text">Summary of what we’ve covered</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../sections/pipes.html" class="pagination-link" aria-label="Pipes">
+        <span class="nav-page-text">Pipes</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
