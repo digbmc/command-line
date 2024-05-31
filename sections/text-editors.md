@@ -39,11 +39,4 @@ While it doesn't really matter which text editor you choose, you should try to b
 
 ## Default recommendation
 
-Choosing a text editor has as much to do with personality as it does with functionality. Graphical user interfaces (GUIs), user options, and "hackability" vary from program to program. For our workshops, we will be using [Atom](https://atom.io/). Not only is Atom free and open source, but it is also consistent across OSX, Windows, and Linux systems.
-
-If you haven't yet, be sure to download Atom according to the [instructions](https://github.com/tri-cods/install/blob/master/sections/atom.md) on the installations page. 
-
-[<<< Previous](what-is-the-command-line.md) | [Next >>>](why-is-the-command-line-useful.md)
-
-
-[More information about text editors](text-editors-ides.md) can be found in the resources at the end of the lesson. 
+Choosing a text editor has as much to do with personality as it does with functionality. Graphical user interfaces (GUIs), user options, and "hackability" vary from program to program. For our workshops, we will be using [Visual Studio Code](https://code.visualstudio.com/). Not only is VS Code free and open source, but it is also consistent across OSX, Windows, and Linux systems, and it has many helpful plugins that we will use in the future.

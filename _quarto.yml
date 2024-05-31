@@ -29,7 +29,7 @@ website:
         text: Navigation
       - href: sections/creating-files-and-folders.md
         text: Creating files and folders
-      - href: sections/creating_a_cheat_sheet.md
+      - href: sections/creating-a-cheat-sheet.md
         text: Creating a cheat sheet
       - href: sections/pipes.md
         text: Pipes
@@ -42,7 +42,6 @@ website:
       - section: Resources
         contents:
           - sections/commands.md
-          - sections/text-editors-ides.md
           - sections/challenges.md
           - sections/glossary.md
   page-footer: Bryn Mawr College Digital Scholarship, 2024

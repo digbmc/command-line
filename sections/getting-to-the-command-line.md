@@ -1,5 +1,3 @@
-[<<< Previous](why-is-the-command-line-useful.md) | [Next >>>](navigation.md)
-
 # Getting to the command line
 
 ## Mac OS
@@ -33,5 +31,3 @@ We won't be using Windows's own non-UNIX version of the command line. We install
  `$`, which we will refer to as the "command prompt," is the place you type commands you wish the computer to execute. We will now learn some of the most common commands.
 
 In the next section, we'll learn how to navigate the filesystem in the command line.
-
-[<<< Previous](why-is-the-command-line-useful.md) | [Next >>>](navigation.md)

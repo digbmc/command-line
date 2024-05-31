@@ -1,5 +1,3 @@
-[<<< Previous](navigation.md) | [Next >>>](creating_a_cheat_sheet.md)
-
 # Creating files and folders
 
 ## Creating a file
@@ -59,8 +57,6 @@ $ pwd
 ```
 
 OK, now you've got a projects folder that you can use throughout the DSRI. It should be visible on your graphical desktop, just like the `foo.txt` file we created earlier.
-
-[<<< Previous](navigation.md) | [Next >>>](creating_a_cheat_sheet.md)
 
 ## Example
 

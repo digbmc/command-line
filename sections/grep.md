@@ -1,5 +1,3 @@
-[<<< Previous](data.md) | [Next >>>](summary.md)  
-
 # Searching text data
 
 So we've cleaned our data set, but how do we find entries that use a particular term?

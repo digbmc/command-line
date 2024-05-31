@@ -21,7 +21,7 @@ In this session, we will:
 - create and sort cheat sheets for the commands we learn
 
 [Get Started >>>](sections/what-is-the-command-line.md)  
-[Glossary >>>](https://github.com/tri-cods/glossary/blob/master/sections/command-line.md)  
+[Glossary >>>](sections/glossary.md)  
 
 -----
 
@@ -31,7 +31,7 @@ In this session, we will:
 [Getting to the command line](sections/getting-to-the-command-line.md)  
 [Navigation](sections/navigation.md)  
 [Creating files and folders](sections/creating-files-and-folders.md)  
-[Creating a cheat sheet](sections/creating_a_cheat_sheet.md)  
+[Creating a cheat sheet](sections/creating-a-cheat-sheet.md)  
 [Pipes](sections/pipes.md)  
 [Exploring text data](sections/data.md)  
 [Searching text data](sections/grep.md)  
@@ -40,10 +40,8 @@ In this session, we will:
 ### Resources
 
 [Commands cheat sheet](sections/commands.md)  
-[More on text editors](sections/text-editors-ides.md)  
-[Other useful commands](sections/other-commands.md)  
 [Further challenges](sections/challenges.md)  
-[Glossary](https://github.com/tri-cods/glossary/blob/master/sections/command-line.md)  
+[Glossary](sections/glossary.md)  
 
 -----
 Current editor: Alice McGrath

@@ -1,5 +1,3 @@
-[<<< Previous](getting-to-the-command-line.md) | [Next >>>](creating-files-and-folders.md)
-
 # Navigation
 
 ## Prefatory pro tips
@@ -107,8 +105,6 @@ Go ahead and use pointing and clicking to navigate to your working directory--yo
 ## Hot Tip
 
 Sometimes, you can see a folder in your GUI, but you aren't sure where it is buried in your file system. You can drag a file or folder into the terminal and it will print the full path to that file or directory! 
-
-[<<< Previous](getting-to-the-command-line.md) | [Next >>>](creating-files-and-folders.md)
   
 ## Example:
 
