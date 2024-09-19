@@ -57,13 +57,13 @@ For your digital best practices, we recommend making sure that file names contai
 
 ## Using a text editor
 
-The challenge for this section will be using a text editor, specifically Atom ([install guide here](https://github.com/tri-cods/install/blob/master/sections/atom.md)), to add some of the commands that we've learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems.
+The challenge for this section will be using a text editor, specifically Visual Studio Code ([download and install here](https://code.visualstudio.com/)), to add some of the commands that we've learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems.
 
 ## Challenge
 
-Open your new cheat-sheet-txt. file in the Atom text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows--and then click "File" and then "Open" from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file.
+Open your new cheat-sheet-txt. file in Visual Studio Code or another text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows--and then click "File" and then "Open" from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file.
 
-Now that you've got your cheat sheet open in the Atom text editor, type to add the commands we've learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.
+Now that you've got your cheat sheet open in a text editor, type to add the commands we've learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.
 
 Save the file.
 
