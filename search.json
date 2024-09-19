@@ -283,7 +283,7 @@
     "href": "sections/creating-a-cheat-sheet.html#using-a-text-editor",
     "title": "Creating a cheat sheet",
     "section": "Using a text editor",
-    "text": "Using a text editor\nThe challenge for this section will be using a text editor, specifically Atom (install guide here), to add some of the commands that we’ve learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems.",
+    "text": "Using a text editor\nThe challenge for this section will be using a text editor, specifically Visual Studio Code (download and install here), to add some of the commands that we’ve learned to the newly created cheat sheet. Text editors are programs that allow you to edit plain text files, such as .txt, .py (Python scripts), and .csv (comma-separated values, also known as spreadsheet files). Remember not to use programs such as Microsoft Word to edit text files, since they add invisible characters that can cause problems.",
     "crumbs": [
       "DSSF Syllabus",
       "Creating a cheat sheet"
@@ -294,7 +294,7 @@
     "href": "sections/creating-a-cheat-sheet.html#challenge",
     "title": "Creating a cheat sheet",
     "section": "Challenge",
-    "text": "Challenge\nOpen your new cheat-sheet-txt. file in the Atom text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows–and then click “File” and then “Open” from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file.\nNow that you’ve got your cheat sheet open in the Atom text editor, type to add the commands we’ve learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.\nSave the file.\nOnce you’re done, check the contents of the file on the command line with the cat command:\n$ cat cheat-sheet.txt\nMy Institute Cheat Sheet\n\nls\nlists files and folders in a directory\n\ncd ~\nchange directory to home folder\n\n...\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
+    "text": "Challenge\nOpen your new cheat-sheet-txt. file in Visual Studio Code or another text editor. You can open it from your programs menu, via Finder or Applications or Launchpad in Mac OSX, or via the Windows button in Windows–and then click “File” and then “Open” from the drop-down menu and navigate to your Desktop folder and click to open the cheat-sheet.txt file.\nNow that you’ve got your cheat sheet open in a text editor, type to add the commands we’ve learned so far to the file. Include descriptions about what each command does. Remember, this cheat sheet is for you. Write descriptions that make sense to you or take notes about questions.\nSave the file.\nOnce you’re done, check the contents of the file on the command line with the cat command:\n$ cat cheat-sheet.txt\nMy Institute Cheat Sheet\n\nls\nlists files and folders in a directory\n\ncd ~\nchange directory to home folder\n\n...\n&lt;&lt;&lt; Previous | Next &gt;&gt;&gt;",
     "crumbs": [
       "DSSF Syllabus",
       "Creating a cheat sheet"
