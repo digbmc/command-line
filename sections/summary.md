@@ -7,6 +7,7 @@ You've made it through your introduction to the command line! By now, you have e
 Now is a good time to do a quick review!
 
 In this session, we learned:
+
 - how to use `touch` and `echo` to create files 
 - how to use `mkdir` to create folders
 - how to navigate our file structure by `cd`(change directory), `pwd` (print working directory), and `ls` (list)
