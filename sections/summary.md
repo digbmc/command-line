@@ -41,7 +41,7 @@ These are just a couple of tools that the command line makes available to you. T
 
 That's the end of the command line session, but if you want to continue to learn about the command line, take a look at 
 
-[other useful commands](other-commands.md), 
+[other useful commands](commands#other-useful-commands), 
 
 [additional challenges](challenges.md),
 
